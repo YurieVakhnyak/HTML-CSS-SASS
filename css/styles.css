@@ -1,3 +1,62 @@
-body {
-    background-color: tomato;
+:root {
+    --primary-text-color: #212121;
+    --accent-color: #2196F3;
+    --second-logo-color: #000000;
+    --secondary-text-color: #757575;
+    --btn-color:#F5F4FA;
+    --white-color:#F5F5F5;
+}
+
+/* header-background #FFFFFF */
+/* hero backgroungd #2F303A */
+/* accent #2196F3 #000000*/
+/* header + заголовки секції #212121 */
+/* тел + p #757575; */
+/* footer tel + mail 
+rgba(255, 255, 255, 0.6) */
+/* header  */
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+
+.header-link span {
+    color: var(--accent-color);
+}
+
+.header-link {
+    color: var(--second-logo-color);
+}
+
+.header-list {
+    color: var(--primary-text-color);
+}
+
+.header-link span {
+    color: var(--accent-color);
+}
+
+.header-mail {
+    color: var(--accent-color);
+}
+
+.header-tel {
+    color: var(--secondary-text-color);
+}
+
+.portfolio-list {
+    color: var(--primary-text-color);
+    background-color: var(--btn-color);
+}
+
+.button:hover,
+.button:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+}
+
+.hero {
+    background-color: #2F303A;;
+}
+h1 {
+    color: #FFFFFF
 }
