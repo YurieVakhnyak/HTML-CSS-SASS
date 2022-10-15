@@ -1,19 +1,11 @@
 :root {
     --primary-text-color: #212121;
-    --accent-color: #2196F3;
     --secondary-text-color: #757575;
-    --btn-color:#F5F4FA;
-    --white-color:#F5F5F5;
+    --accent-color: #2196F3;    
+    --white-grey-color:#F5F4FA;
+    --white-tint-color:#F5F5F5;
 }
 
-/* header-background #FFFFFF */
-/* hero backgroungd #2F303A */
-/* accent #2196F3 #000000*/
-/* header + заголовки секції #212121 */
-/* тел + p #757575; */
-/* footer tel + mail 
-rgba(255, 255, 255, 0.6) */
-/* header  */
 li {
     list-style-type: none; /* Прибираємо маркери */
    }
@@ -23,9 +15,9 @@ li {
 }
 
 a { 
-    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    text-decoration: none; /* Відміняємо підкреслення посилань */
    } 
-   
+
 .logo span,
 .logo-footer span,
 .header-link span,
@@ -34,12 +26,16 @@ a {
 }
 
 .logo-footer,
-.footer-link span {
+.footer-map {
     color:#FFFFFF
 }
 
-.footer-link {
+.footer-mail {
     color:#D9D9D9
+}
+
+.footer-tel {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .logo {
@@ -48,14 +44,24 @@ a {
 
 .btn-list {
     color: var(--primary-text-color);
-    background-color: var(--btn-color);
+    background-color: var(--white-grey-color);
 }
 
 .button:hover,
 .button:focus,
 .hero-btn {
-    color: var(--white-color);
+    color: var(--white-tint-color);
     background-color: var(--accent-color);
+}
+
+.properties,
+.activities,
+.portfolio-main {
+    background-color: var(--white-tint-color);
+}
+
+.team {
+    background-color: var(--white-grey-color);
 }
 
 .footer,
@@ -84,3 +90,5 @@ a {
 .header-tel {
     color: var(--secondary-text-color);
 }
+
+
