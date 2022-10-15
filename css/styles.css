@@ -22,6 +22,10 @@ li {
     display: none; /*Приховуємо зайві заголовки */
 }
 
+a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   } 
+   
 .logo span,
 .logo-footer span,
 .header-link span,
