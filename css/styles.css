@@ -1,7 +1,6 @@
 :root {
     --primary-text-color: #212121;
     --accent-color: #2196F3;
-    --second-logo-color: #000000;
     --secondary-text-color: #757575;
     --btn-color:#F5F4FA;
     --white-color:#F5F5F5;
@@ -16,40 +15,35 @@
 rgba(255, 255, 255, 0.6) */
 /* header  */
 li {
-    list-style-type: none; /* Убираем маркеры */
+    list-style-type: none; /* Прибираємо маркери */
    }
 
-.header-link span {
-    color: var(--accent-color);
+.hidden {
+    display: none; /*Приховуємо зайві заголовки */
 }
 
-.header-link {
-    color: var(--second-logo-color);
-}
-
-.header-list {
-    color: var(--primary-text-color);
-}
-
-.header-link span {
-    color: var(--accent-color);
-}
-
+.header-link span,
 .header-mail {
     color: var(--accent-color);
 }
 
-.header-tel {
-    color: var(--secondary-text-color);
+.header-link {
+    color: #000000;
 }
 
-.portfolio-list {
+.btn-list {
     color: var(--primary-text-color);
     background-color: var(--btn-color);
 }
 
+.button {
+    color: var(--primary-text-color);
+    background-color: var(--btn-color)
+}
+
 .button:hover,
-.button:focus {
+.button:focus,
+.hero-btn {
     color: var(--white-color);
     background-color: var(--accent-color);
 }
@@ -57,6 +51,25 @@ li {
 .hero {
     background-color: #2F303A;;
 }
-h1 {
+.hero-title {
     color: #FFFFFF
+}
+
+.header-list,
+.team-title,
+.team-subtitle,
+.properties-subtitle,
+.portfolio-subtitle,
+.activities-title,
+.team-title {
+    color:var(--primary-text-color)
+}
+
+.properties-text,
+.portfolio-text,
+.team-text,
+.properties-text,
+.team-description,
+.header-tel {
+    color: var(--secondary-text-color);
 }
