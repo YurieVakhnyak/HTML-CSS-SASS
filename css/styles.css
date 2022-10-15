@@ -6,6 +6,10 @@
     --white-tint-color:#F5F5F5;
 }
 
+body {
+    font-family: 'Roboto';
+}
+
 li {
     list-style-type: none; /* Прибираємо маркери */
    }
@@ -20,8 +24,10 @@ a {
 
 .logo span,
 .logo-footer span,
-.header-link span,
-.header-mail {
+.header-list:hover,
+.header-list:focus,
+.header-contacts:hover,
+.header-contacts:focus {
     color: var(--accent-color);
 }
 
@@ -77,8 +83,7 @@ a {
 .team-subtitle,
 .properties-subtitle,
 .portfolio-subtitle,
-.activities-title,
-.team-title {
+.activities-title {
     color:var(--primary-text-color)
 }
 
@@ -87,7 +92,7 @@ a {
 .team-text,
 .properties-text,
 .team-description,
-.header-tel {
+.header-contacts .header-link {
     color: var(--secondary-text-color);
 }
 
