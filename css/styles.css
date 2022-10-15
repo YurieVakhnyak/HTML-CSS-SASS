@@ -22,23 +22,29 @@ li {
     display: none; /*Приховуємо зайві заголовки */
 }
 
+.logo span,
+.logo-footer span,
 .header-link span,
 .header-mail {
     color: var(--accent-color);
 }
 
-.header-link {
+.logo-footer,
+.footer-link span {
+    color:#FFFFFF
+}
+
+.footer-link {
+    color:#D9D9D9
+}
+
+.logo {
     color: #000000;
 }
 
 .btn-list {
     color: var(--primary-text-color);
     background-color: var(--btn-color);
-}
-
-.button {
-    color: var(--primary-text-color);
-    background-color: var(--btn-color)
 }
 
 .button:hover,
@@ -48,8 +54,9 @@ li {
     background-color: var(--accent-color);
 }
 
+.footer,
 .hero {
-    background-color: #2F303A;;
+    background-color: #2F303A;
 }
 .hero-title {
     color: #FFFFFF
