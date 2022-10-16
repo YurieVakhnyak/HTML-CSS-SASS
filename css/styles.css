@@ -4,6 +4,11 @@
     --accent-color: #2196F3;    
     --white-grey-color:#F5F4FA;
     --white-tint-color:#F5F5F5;
+    --dark-bcg-color:#2F303A;
+    --pure-white:#FFFFFF;
+    --pure-black:#000000;
+    --grey-color:#D9D9D9;
+    --white-transparence:rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -33,19 +38,19 @@ a {
 
 .logo-footer,
 .footer-map {
-    color:#FFFFFF
+    color: var(--pure-white);
 }
 
 .footer-mail {
-    color:#D9D9D9
+    color: var(--grey-color);
 }
 
 .footer-tel {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--white-transparence);
 }
 
 .logo {
-    color: #000000;
+    color: var(--pure-black);
 }
 
 .btn-list {
@@ -72,10 +77,10 @@ a {
 
 .footer,
 .hero {
-    background-color: #2F303A;
+    background-color: var(--dark-bcg-color);
 }
 .hero-title {
-    color: #FFFFFF
+    color: var(--pure-white);
 }
 
 .header-list,
@@ -84,7 +89,7 @@ a {
 .properties-subtitle,
 .portfolio-subtitle,
 .activities-title {
-    color:var(--primary-text-color)
+    color:var(--primary-text-color);
 }
 
 .properties-text,
