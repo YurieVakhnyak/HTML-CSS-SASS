@@ -1,95 +1,193 @@
 :root {
-    --primary-text-color: #212121;
-    --secondary-text-color: #757575;
-    --accent-color: #2196F3;    
-    --white-grey-color:#F5F4FA;
-    --white-tint-color:#F5F5F5;
-    --dark-bcg-color:#2F303A;
-    --pure-white:#FFFFFF;
-    --pure-black:#000000;
-    --grey-color:#D9D9D9;
-    --white-transparence:rgba(255, 255, 255, 0.6);
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --white-grey-color: #f5f4fa;
+  --white-tint-color: #f5f5f5;
+  --dark-bcg-color: #2f303a;
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+  --grey-color: #d9d9d9;
+  --white-transparence: rgba(255, 255, 255, 0.6);
 }
 
 body {
-    font-family: 'Roboto';
-}
-
-li {
-    list-style-type: none; /* Прибираємо маркери */
-   }
-
-.hidden {
-    display: none; /*Приховуємо зайві заголовки */
-}
-
-a { 
-    text-decoration: none; /* Відміняємо підкреслення посилань */
-   } 
-
-.logo span,
-.logo-footer span,
-.header-list:hover,
-.header-list:focus,
-.header-contacts:hover,
-.header-contacts:focus {
-    color: var(--accent-color);
-}
-
-.logo-footer,
-.footer-map {
-    color: var(--pure-white);
-}
-
-.footer-mail {
-    color: var(--grey-color);
-}
-
-.footer-tel {
-    color: var(--white-transparence);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
 }
 
 .logo {
-    color: var(--pure-black);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 25);
+}
+
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+
+.hero-title {
+  color: var(--pure-white);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: calc(60 / 44);
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.hero-btn {
+  color: var(--pure-white);
+  background-color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  text-align: center;
+  height: 50px;
+  width: 216px;
+  left: 692px;
+  top: 430px;
+  border-radius: 4px;
+}
+
+.properties-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+}
+
+.properties-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.team-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(19 / 16);
+  text-align: center;
+}
+
+.team-item .team-descr {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: calc(19 / 16);
+  text-align: center;
+}
+
+.footer-adress {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+}
+
+.portfolio-subtitle {
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+
+.portfolio-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  height: 38px;
+  width: 130px;
+  left: 957px;
+  top: 174px;
+  border-radius: 4px;
+}
+
+li {
+  list-style-type: none; /* Прибираємо маркери */
+}
+
+.hidden {
+  display: none; /*Приховуємо зайві заголовки */
+}
+
+a {
+  text-decoration: none; /* Відміняємо підкреслення посилань */
+}
+
+.logo span,
+.header-list .header-link:hover,
+.header-list .header-link:focus,
+.header-contacts:hover,
+.header-contacts:focus {
+  color: var(--accent-color);
+}
+
+.logo.logo-footer,
+.footer-map {
+  color: var(--pure-white);
+}
+
+.footer-mail {
+  color: var(--grey-color);
+}
+
+.footer-tel {
+  color: var(--white-transparence);
+}
+
+.logo {
+  color: var(--pure-black);
 }
 
 .btn-list {
-    color: var(--primary-text-color);
-    background-color: var(--white-grey-color);
+  color: var(--primary-text-color);
+  background-color: var(--white-grey-color);
 }
 
 .button:hover,
-.button:focus,
-.hero-btn {
-    color: var(--white-tint-color);
-    background-color: var(--accent-color);
+.button:focus {
+  color: var(--white-tint-color);
+  background-color: var(--accent-color);
 }
 
 .properties,
 .activities,
 .portfolio-main {
-    background-color: var(--white-tint-color);
+  background-color: var(--white-tint-color);
 }
 
 .team {
-    background-color: var(--white-grey-color);
+  background-color: var(--white-grey-color);
 }
 
 .footer,
 .hero {
-    background-color: var(--dark-bcg-color);
-}
-.hero-title {
-    color: var(--pure-white);
+  background-color: var(--dark-bcg-color);
 }
 
-.header-list,
+.header-link,
 .team-title,
 .team-subtitle,
 .properties-subtitle,
 .portfolio-subtitle,
 .activities-title {
-    color:var(--primary-text-color);
+  color: var(--primary-text-color);
 }
 
 .properties-text,
@@ -98,7 +196,5 @@ a {
 .properties-text,
 .team-description,
 .header-contacts .header-link {
-    color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
-
-
