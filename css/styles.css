@@ -17,14 +17,29 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* global settings */
+
 ul,
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+}
+
+li {
+  list-style-type: none; /* Прибираємо маркери */
+}
+
+.hidden {
+  display: none; /*Приховуємо зайві заголовки */
+}
+
+a {
+  text-decoration: none; /* Відміняємо підкреслення посилань */
 }
 
 .header-list {
@@ -74,10 +89,12 @@ h4 {
 }
 
 .header-nav .header-link {
-  /*   
+  /*     
   padding-top: 32px;
   padding-bottom: 32px; */
 }
+
+/* hero */
 
 .hero {
   text-align: center;
@@ -88,13 +105,12 @@ h4 {
 .hero-title {
   color: var(--pure-white);
   text-transform: uppercase;
-  
+
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   margin-bottom: 40px;
- 
 }
 
 .hero-btn {
@@ -110,25 +126,66 @@ h4 {
   width: 216px;
   border-width: 0px;
   border-radius: 4px;
-
 }
 
-.properties-subtitle {
+/* sections */
+
+.section-title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+  outline: 2px solid tomato;
+}
+
+.section-list {
+  display: flex;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+
+.section-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section-subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
+  margin-bottom: 10px;
+  outline: 2px solid teal;
+}
+
+/* properties */
+
+.properties {
+  padding-top: 94px;
+  padding-bottom: 118px;
 }
 
 .properties-text {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
+
 }
 
-.section-title {
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
+/* Our activities */
+
+.activities-title {
+
+}
+
+.activities {
+  padding-bottom: 94px;
+
+}
+
+/* team */
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-subtitle {
@@ -136,6 +193,12 @@ h4 {
   font-weight: 500;
   line-height: calc(19 / 16);
   text-align: center;
+
+}
+
+.team-img {
+  margin-bottom: 30px;
+
 }
 
 .team-item .team-descr {
@@ -143,6 +206,20 @@ h4 {
   font-weight: 400;
   line-height: calc(19 / 16);
   text-align: center;
+
+}
+
+/* footer */
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+
 }
 
 .footer-adress {
@@ -150,6 +227,21 @@ h4 {
   font-size: 14px;
   line-height: calc(24 / 14);
 }
+
+.logo.logo-footer,
+.footer-link {
+  margin-left: 215px;
+  margin-right: 215px;
+}
+
+.footer-item:not(:last-child) {
+  display: block;
+  margin-bottom: 9px;  
+  
+}
+
+
+/* portfolio page */
 
 .portfolio-subtitle {
   font-size: 18px;
@@ -177,17 +269,7 @@ h4 {
   border-radius: 4px;
 }
 
-li {
-  list-style-type: none; /* Прибираємо маркери */
-}
-
-.hidden {
-  display: none; /*Приховуємо зайві заголовки */
-}
-
-a {
-  text-decoration: none; /* Відміняємо підкреслення посилань */
-}
+/* colors */
 
 .logo span,
 .header-list .header-link:hover,
