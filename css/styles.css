@@ -124,22 +124,28 @@ a {
   text-align: center;
   height: 50px;
   width: 216px;
-  border-width: 0px;
   border-radius: 4px;
+  border-width: 0px;
 }
 
 /* sections */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .section-title {
   font-size: 36px;
   line-height: 42px;
   text-align: center;
   margin-bottom: 50px;
-  outline: 2px solid tomato;
+  
 }
 
 .section-list {
   display: flex;
+  justify-content: center;
   margin-left: 215px;
   margin-right: 215px;
 }
@@ -153,52 +159,40 @@ a {
   font-size: 14px;
   line-height: calc(16 / 14);
   margin-bottom: 10px;
-  outline: 2px solid teal;
+  
 }
 
 /* properties */
 
-.properties {
-  padding-top: 94px;
+.properties.section {
   padding-bottom: 118px;
+  
 }
 
 .properties-text {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
-
 }
 
 /* Our activities */
 
-.activities-title {
-
-}
-
-.activities {
-  padding-bottom: 94px;
-
+.activities.section {
+  padding-top: 0;
 }
 
 /* team */
-
-.team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .team-subtitle {
   font-size: 16px;
   font-weight: 500;
   line-height: calc(19 / 16);
   text-align: center;
-
 }
 
 .team-img {
   margin-bottom: 30px;
-
+  
 }
 
 .team-item .team-descr {
@@ -206,7 +200,6 @@ a {
   font-weight: 400;
   line-height: calc(19 / 16);
   text-align: center;
-
 }
 
 /* footer */
@@ -219,7 +212,6 @@ a {
 .logo.logo-footer {
   display: block;
   margin-bottom: 20px;
-
 }
 
 .footer-adress {
@@ -236,17 +228,42 @@ a {
 
 .footer-item:not(:last-child) {
   display: block;
-  margin-bottom: 9px;  
-  
+  margin-bottom: 9px;
 }
 
-
 /* portfolio page */
+
+.btn-list {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-text-color);
+  background-color: var(--white-grey-color);
+  
+  margin-bottom: 50px;
+}
+
+.portfolio-item {
+  background-color: var(--pure-white);
+  
+  /* border-width: 3px; */
+}
+
+.portfolio-list .section-list {
+
+margin-bottom: 30px;
+}
+
+.portfolio-img {
+  margin-bottom: 20px;
+  
+}
 
 .portfolio-subtitle {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  
 }
 
 .portfolio-text {
@@ -267,6 +284,7 @@ a {
   left: 957px;
   top: 174px;
   border-radius: 4px;
+  border-width: 0px;
 }
 
 /* colors */
@@ -288,11 +306,6 @@ a {
 
 .footer-tel {
   color: var(--white-transparence);
-}
-
-.btn-list {
-  color: var(--primary-text-color);
-  background-color: var(--white-grey-color);
 }
 
 .button:hover,
