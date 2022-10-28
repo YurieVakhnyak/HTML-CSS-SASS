@@ -8,7 +8,6 @@
   --dark-bcg-color: #2f303a;
   --pure-white: #ffffff;
   --pure-black: #000000;
-  --grey-color: #d9d9d9;
   --white-transparence: rgba(255, 255, 255, 0.6);
 }
 
@@ -25,6 +24,7 @@ body {
 /* global settings */
 
 ul,
+li,
 h1,
 h2,
 h3,
@@ -33,6 +33,10 @@ p {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+}
+
+img {
+  display: block;
 }
 
 li {
@@ -47,10 +51,13 @@ a {
   text-decoration: none; /* Відміняємо підкреслення посилань */
 }
 
+/* header */
+
 .header-list {
   display: flex;
   align-items: center;
 }
+
 
 .logo span {
   margin-left: 215px;
@@ -62,7 +69,7 @@ a {
   color: var(--accent-color);
 }
 
-.header {
+.header > .container {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -72,18 +79,40 @@ a {
   border-bottom: 1px solid var(--grey-color);
 }
 
-.header-item:not(:last-child) {
-  margin-right: 50px;
+.header-mail-container {
+  display: flex;
+  height: 16px;
+  width: 161px;
+  margin-right: 30px;
+  outline: 2px solid rgb(0, 255, 98);
+}
+
+.header-tel-container {
+  
+  display: flex;
+  height: 16px;
+  width: 142px;
+  outline: 2px solid rgb(255, 0, 0);
 }
 
 .header-nav .header-item:first-child {
   margin-left: 93px;
 }
 
+/* .header-contacts > .header-mail > .header-mail-container > .mail.icon {
+margin-right: 10px;
+} */
+
 .header-contacts {
   margin-left: auto;
   margin-right: 215px;
+  
 }
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 
 .logo {
   font-family: Raleway, sans-serif;
@@ -93,18 +122,20 @@ a {
   color: var(--pure-black);
 }
 
-.header-nav .header-link {
-  /*     
-  padding-top: 32px;
-  padding-bottom: 32px; */
-}
-
 /* hero */
 
-.hero {
+.hero .container {
   text-align: center;
   padding-top: 200px;
-  padding-bottom: 200px;
+  outline: 2px solid green;
+}
+
+.overlay {
+  box-sizing: border-box;
+  max-width: 1600px;
+  height: 600px;
+  background-image: url(../css/image/hero/hero-bcg-img.jpg);
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -114,7 +145,7 @@ a {
   font-size: 44px;
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -168,6 +199,34 @@ a {
 
 .properties.section {
   padding-bottom: 118px;
+}
+
+.properties-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--white-grey-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
+
+.icon-locator::before {
+  background-image: url(../css/image/properties/locator-icon.png);
+}
+
+.icon-time::before {
+  background-image: url(../css/image/properties/time-icon.png);
+}
+
+.icon-graphic::before {
+  background-image: url(../css/image/properties/graphic-icon.png);
+}
+
+.icon-astronaut::before {
+  background-image: url(../css/image/properties/astronaut-icon.png);
 }
 
 .properties-text {
@@ -236,45 +295,24 @@ a {
   justify-content: center;
   color: var(--primary-text-color);
   background-color: var(--white-grey-color);
-
   margin-bottom: 50px;
-}
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .portfolio-flex-el {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-text-cover {
+  padding: 20px 24px;
   background-color: var(--pure-white);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  outline: 1px solid #eeeeee;
-  outline: 1px solid #09e753;
-}
-
-/* .portfolio-flex-el {
-  width: calc((100% - 60px) / 3);
-} */
-
-.portfolio-flex-el:nth-child(3n) {
-  margin-right: 0px;  
-}
-
-.portfolio-flex-el:nth-last-child(-n + 3) {
-margin-bottom: 0px;
-}
-
-/* .portfolio-flex-el:not(:nth-child(3n)) {
-  margin-right: 30px;  
-} */
-
-/* .portfolio-flex-el:not(:nth-last-child(-n + 3)) {
-margin-bottom: 30px;
-} */
-
-.portfolio-img {
-  margin-bottom: 20px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
 
 .portfolio-subtitle {
@@ -282,14 +320,12 @@ margin-bottom: 30px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   margin-bottom: 4px;
-  margin-left: 24px;
 }
 
 .portfolio-text {
   font-weight: 400;
   font-size: 16px;
   line-height: calc(30 / 16);
-  margin-left: 24px;
 }
 
 .button {
@@ -315,7 +351,7 @@ margin-bottom: 30px;
 }
 
 .footer-mail {
-  color: var(--grey-color);
+  color: #d9d9d9;
 }
 
 .footer-tel {
@@ -339,7 +375,7 @@ margin-bottom: 30px;
 }
 
 .footer,
-.hero {
+.container.overlay {
   background-color: var(--dark-bcg-color);
 }
 
