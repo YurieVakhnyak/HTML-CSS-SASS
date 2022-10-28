@@ -53,11 +53,15 @@ a {
 
 /* header */
 
-.header-list {
+.header > .container {
   display: flex;
   align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--grey-color);
 }
-
 
 .logo span {
   margin-left: 215px;
@@ -69,50 +73,41 @@ a {
   color: var(--accent-color);
 }
 
-.header > .container {
+.header-list {
   display: flex;
   align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid var(--grey-color);
 }
 
-.header-mail-container {
-  display: flex;
-  height: 16px;
-  width: 161px;
-  margin-right: 30px;
-  outline: 2px solid rgb(0, 255, 98);
+.header-icon {
+  padding-right: 10px;  
 }
 
-.header-tel-container {
-  
-  display: flex;
-  height: 16px;
-  width: 142px;
-  outline: 2px solid rgb(255, 0, 0);
+.mail-icon{
+  height: 12px;
+  width: 16px; 
+  /* margin-top: 4px;
+  fill: #2196f3; */
 }
+
+.tel-icon {
+height: 16px;
+  width: 10px;
+ }
 
 .header-nav .header-item:first-child {
   margin-left: 93px;
 }
 
-/* .header-contacts > .header-mail > .header-mail-container > .mail.icon {
-margin-right: 10px;
-} */
-
 .header-contacts {
+  height: 16px;
   margin-left: auto;
-  margin-right: 215px;
-  
+  margin-right: 215px;  
+  outline: 2px solid green;
 }
 
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
-
 
 .logo {
   font-family: Raleway, sans-serif;
@@ -126,8 +121,7 @@ margin-right: 10px;
 
 .hero .container {
   text-align: center;
-  padding-top: 200px;
-  outline: 2px solid green;
+  padding-top: 200px;  
 }
 
 .overlay {
