@@ -360,9 +360,31 @@ a {
 /* footer */
 
 .footer > .container {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--dark-bcg-color);
+}
+
+.footer-box-two {
+  width: 206px;
+  height: 80px;
+  margin-top: 12px;
+  margin-left: 104px; 
+}
+
+.footer-box-two .team-icon-container {
+  margin: 0;
+}
+
+.footer-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill:var(--pure-white);
+}
+  
+.footer-text {
+color: var(--pure-white);
+margin-bottom: 20px;
 }
 
 .logo.logo-footer {
