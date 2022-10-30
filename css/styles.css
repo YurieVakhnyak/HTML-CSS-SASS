@@ -99,16 +99,12 @@ a {
 .header-item {
   fill: var(--secondary-text-color);
 }
-.mail-icon {
-  height: 12px;
-  width: 16px;
+.mail-icon { 
   fill: inherit;
   top: 1px;
 }
 
 .tel-icon {
-  height: 16px;
-  width: 10px;
   fill: inherit;
   top: 3px;
 }
@@ -147,7 +143,11 @@ a {
   max-width: 1600px;
   height: 600px;
   background-color: var(--dark-bcg-color);
-  background-image: url(../css/image/hero/hero-bcg-img.jpg);
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url(../css/image/hero/hero-bcg-img.jpg);
   background-repeat: no-repeat;
 }
 
@@ -231,9 +231,7 @@ a {
 }
 
 .properties-icon {
-  position: relative;
-  height: 70px;
-  width: 70px;
+  position: relative; 
   top: 25px;
   border-radius: 0px;
 }
@@ -300,6 +298,7 @@ a {
   width: 270px;
   height: 428px;
   background-color: var(--pure-white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
 }
 
 .team-icon-container {
@@ -324,9 +323,7 @@ a {
 }
 
 .team-icon {
-  position: relative;
-  width: 20px;
-  height: 20px;
+  position: relative; 
   fill: inherit;
   top: 12px;
   left: 12px;
@@ -342,6 +339,7 @@ a {
   fill: var(--grey-icon-color);
 }
 
+
 .clients-item:hover {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
@@ -349,8 +347,6 @@ a {
 
 .clients-icon {
   position: relative;
-  height: 60px;
-  width: 106px;
   left: 32px;
   top: 16px;
   border-radius: 0px;
@@ -413,7 +409,7 @@ margin-bottom: 20px;
   background-color: var(--white-tint-color);
 }
 
-.btn-list {
+.portfolio-btn-list {
   display: flex;
   justify-content: center;
   color: var(--primary-text-color);
@@ -424,10 +420,10 @@ margin-bottom: 20px;
 
 .btn-portfolio {
   display: inline-block;
-  width: 0;
 }
 
-.portfolio-flex-el {
+.portfolio-flex-el:hover,
+.portfolio-flex-el:focus {
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 .portfolio-list {
@@ -439,14 +435,15 @@ margin-bottom: 20px;
 .portfolio-text-cover {
   padding: 20px 24px;
   background-color: var(--pure-white);
-  border: 1px solid #eeeeee;
-  border-top: 0;
+  outline: 1px solid #eeeeee;
+  
 }
 
 .portfolio-subtitle {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
+  color:var(--primary-text-color);
   margin-bottom: 4px;
 }
 
@@ -464,7 +461,7 @@ margin-bottom: 20px;
   line-height: calc(26 / 16);
   text-align: center;
   height: 38px;
-  width: 130px;
+  min-width: 50px;
   left: 957px;
   top: 174px;
   border-radius: 4px;
@@ -490,6 +487,7 @@ margin-bottom: 20px;
 .button:focus {
   color: var(--white-tint-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .properties-text,
