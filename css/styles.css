@@ -78,17 +78,17 @@ a {
   transition: color var(--anim);
 }
 
-.header-page-link::after {
+.header-page-link.current::after {
   content: "";
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   position: absolute;
-  bottom: -24px;
+  bottom: -33px;
   left: 0;
 
-  background-color: currentColor;
+  background-color: var(--accent-color);
 }
 
 .logo span,
