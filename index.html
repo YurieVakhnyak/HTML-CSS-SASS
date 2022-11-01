@@ -17,7 +17,7 @@
 
 <!-- Main page -->
 
-<body>
+<body id="page">
   <!-- header-->
   <header class="header">
     <div class="container">
@@ -25,7 +25,7 @@
       <nav class="header-nav">
         <ul class="header-list">
           <li class="header-item">
-            <a href="" class="header-page-link">Студія</a>
+            <a href="./index.html" class="header-page-link">Студія</a>
           </li>
           <li class="header-item">
             <a href="./portfolio.html" class="header-page-link">Портфоліо</a>
@@ -60,7 +60,7 @@
     <section class="hero">
       <div class="container overlay">
         <h1 class="hero-title">Ефективні рішення для<br />вашого бізнесу</h1>
-        <button class="hero-btn btn" type="button">Замовити послугу</button>
+        <button class="hero-btn btn"  type="button" data-modal-open>Замовити послугу</button>
       </div>
     </section>
 
@@ -134,14 +134,23 @@
           <li class="activities-item section-item">
             <img class="activities-img" src="./images/hands_and_charts.jpg" alt="Дві руки з екраном і таблицями"
               width="370" height="294" />
+              <div class="activities-label-box">
+                <p class="activities-text section-subtexttitle">Десктопні додатки</p>
+              </div>
           </li>
           <li class="activities-item section-item">
             <img class="activities-img" src="./images/smartphone_in_hand.jpg" alt="Смартфон у руці" width="370"
               height="294" />
+              <div class="activities-label-box">
+                <p class="activities-text section-subtexttitle">Мобільні додатки</p>
+              </div>
           </li>
           <li class="activities-item section-item">
             <img class="activities-img" src="./images/color_diagramm_on_screen.jpg"
               alt="Кольорова гексагональна діаграма на екрані" width="370" height="294" />
+              <div class="activities-label-box">
+                <p class="activities-text section-subtexttitle">Дизайнерські рішення</p>
+              </div>
           </li>
         </ul>
       </div>
@@ -409,6 +418,15 @@
     </div>
 
   </footer>
+
+  <!-- Modal window -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn" data-modal-close>X</button>
+    </div>
+  </div>
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

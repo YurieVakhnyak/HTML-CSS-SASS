@@ -10,6 +10,7 @@
   --pure-black: #000000;
   --grey-icon-color: #afb1b8;
   --white-transparence: rgba(255, 255, 255, 0.6);
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*----- global settings -----*/
@@ -42,6 +43,10 @@ a {
   text-decoration: none; /* Відміняємо підкреслення посилань */
 }
 
+#page.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   width: 1600px;
   font-family: "Roboto", sans-serif;
@@ -59,6 +64,7 @@ a {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--grey-color);
+  height: 80px;
 }
 
 .logo span {
@@ -67,6 +73,22 @@ a {
 
 .header-page-link {
   color: var(--primary-text-color);
+  position: relative;
+
+  transition: color var(--anim);
+}
+
+.header-page-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+
+  background-color: currentColor;
 }
 
 .logo span,
@@ -79,6 +101,8 @@ a {
 
 .header .header-link {
   color: var(--secondary-text-color);
+
+  transition: color var(--anim);
 }
 
 .header-contacts > .header-item:hover {
@@ -94,12 +118,14 @@ a {
   color: var(--secondary-text-color);
   position: relative;
   padding-right: 10px;
+
+  transition: fill var(--anim);
 }
 
 .header-item {
   fill: var(--secondary-text-color);
 }
-.mail-icon { 
+.mail-icon {
   fill: inherit;
   top: 1px;
 }
@@ -144,10 +170,10 @@ a {
   height: 600px;
   background-color: var(--dark-bcg-color);
   background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ),
-  url(../css/image/hero/hero-bcg-img.jpg);
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../css/image/hero/hero-bcg-img.jpg);
   background-repeat: no-repeat;
 }
 
@@ -226,12 +252,17 @@ a {
   height: 120px;
   text-align: center;
   margin-bottom: 30px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
   background-color: var(--white-grey-color);
+
+  transition: box-shadow var(--anim);
 }
 
+.properties-icon-box:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .properties-icon {
-  position: relative; 
+  position: relative;
   top: 25px;
   border-radius: 0px;
 }
@@ -270,10 +301,31 @@ a {
   padding-top: 0;
 }
 
+.activities-text {
+  text-transform: uppercase;
+  color: var(--pure-white);
+}
+
+.activities-item {
+  position: relative;
+}
+
+.activities-label-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 370px;
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /* ----- team ----- */
 
 .team .section {
-  background-color: var(--white-grey-color);  
+  background-color: var(--white-grey-color);
 }
 
 .team-subtitle {
@@ -298,7 +350,7 @@ a {
   width: 270px;
   height: 428px;
   background-color: var(--pure-white);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .team-icon-container {
@@ -315,6 +367,8 @@ a {
   border-radius: 50%;
   padding: 0px;
   fill: var(--grey-icon-color);
+
+  transition: background-color var(--anim);
 }
 
 .team-icon-item:hover {
@@ -323,10 +377,12 @@ a {
 }
 
 .team-icon {
-  position: relative; 
+  position: relative;
   fill: inherit;
   top: 12px;
   left: 12px;
+
+  transition: fill var(--anim);
 }
 
 /* ----- clients ----- */
@@ -337,8 +393,9 @@ a {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   fill: var(--grey-icon-color);
-}
 
+  transition: fill var(--anim), border-color var(--anim);
+}
 
 .clients-item:hover {
   border: 1px solid var(--accent-color);
@@ -366,7 +423,7 @@ a {
   width: 206px;
   height: 80px;
   margin-top: 12px;
-  margin-left: 104px; 
+  margin-left: 104px;
 }
 
 .footer-box-two .team-icon-container {
@@ -375,12 +432,12 @@ a {
 
 .footer-icon {
   background-color: rgba(255, 255, 255, 0.1);
-  fill:var(--pure-white);
+  fill: var(--pure-white);
 }
-  
+
 .footer-text {
-color: var(--pure-white);
-margin-bottom: 20px;
+  color: var(--pure-white);
+  margin-bottom: 20px;
 }
 
 .logo.logo-footer {
@@ -420,6 +477,21 @@ margin-bottom: 20px;
 
 .btn-portfolio {
   display: inline-block;
+
+  transition: color var(--anim), background-color var(--anim),
+    box-shadow var(--anim);
+}
+
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+  color: var(--white-tint-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-flex-el,
+.portfolio-flex-el {
+  transition: box-shadow var(--anim);
 }
 
 .portfolio-flex-el:hover,
@@ -436,14 +508,13 @@ margin-bottom: 20px;
   padding: 20px 24px;
   background-color: var(--pure-white);
   outline: 1px solid #eeeeee;
-  
 }
 
 .portfolio-subtitle {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
-  color:var(--primary-text-color);
+  color: var(--primary-text-color);
   margin-bottom: 4px;
 }
 
@@ -483,17 +554,52 @@ margin-bottom: 20px;
   color: var(--white-transparence);
 }
 
-.button:hover,
-.button:focus {
-  color: var(--white-tint-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
 .properties-text,
 .portfolio-text,
 .team-text,
 .properties-text,
 .team-description {
   color: var(--secondary-text-color);
+}
+
+/* ----- modal window ----- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: opacity var(--anim), visibility var(--anim);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
 }
