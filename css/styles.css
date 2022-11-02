@@ -494,10 +494,45 @@ a {
   transition: box-shadow var(--anim);
 }
 
+.portfolio-overlay-box {
+  position: relative;
+  overflow: hidden;
+  width: 370px;
+  height: 294px;
+}
+
+.hover-overlay-portfolio {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+
+  font-size: 18px;
+  padding: 63px 24px;
+  font-weight: 400;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--pure-white);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--anim);
+}
+
 .portfolio-flex-el:hover,
 .portfolio-flex-el:focus {
   box-shadow: 0px 4px 4px 0px #00000040;
 }
+
+.portfolio-flex-el:hover .hover-overlay-portfolio {
+  transform: translateY(0%);
+}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -574,7 +609,7 @@ a {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(47, 48, 58, 0.8);
 
   transition: opacity var(--anim), visibility var(--anim);
 }
@@ -587,19 +622,36 @@ a {
 
 .modal {
   position: absolute;
+  height: 581px;
+  width: 528px;
   top: 50%;
   left: 50%;
+  border-radius: 4px;
+
   transform: translate(-50%, -50%);
 
-  width: 400px;
-  height: 500px;
   background-color: #fff;
-  border-radius: 10px;
 }
 
 .modal-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+
+  top: 23px;
+  right: -6px;
   transform: translate(-50%, -50%);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  cursor: pointer;
 }
