@@ -11,6 +11,8 @@
   --grey-icon-color: #afb1b8;
   --white-transparence: rgba(255, 255, 255, 0.6);
   --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --animate-delay: 2s;
 }
 
 /*----- global settings -----*/
@@ -620,6 +622,8 @@ a {
   pointer-events: none;
 }
 
+
+
 .modal {
   position: absolute;
   height: 581px;
@@ -627,10 +631,18 @@ a {
   top: 50%;
   left: 50%;
   border-radius: 4px;
-
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  
 
   background-color: #fff;
+  transition: transform var(--anim), opacity var(--anim);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+  
 }
 
 .modal-btn {
