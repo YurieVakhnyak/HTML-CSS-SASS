@@ -37,12 +37,26 @@ li {
   list-style-type: none; /* Прибираємо маркери */
 }
 
-.hidden {
-  display: none; /*Приховуємо зайві заголовки */
+.visual-hidden {
+  /*Приховуємо зайві заголовки */
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 a {
   text-decoration: none; /* Відміняємо підкреслення посилань */
+}
+
+body {
+  margin: 0;
 }
 
 #page.no-scroll {
@@ -58,10 +72,11 @@ a {
 
 /*----- header -----*/
 
-.header > .container { 
-/* position: fixed;
+.header > .container {
+  position: fixed;
   top: 0;
-  left: 0; */
+  left: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -70,15 +85,35 @@ a {
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--grey-color);
   height: 80px;
+  background-color: var(--pure-white);
+}
+
+.logo-header {
+  transition: transform 500ms;
+  
+}
+
+.logo.logo-header:hover {
+  transform: translateX(-5%) scale(1.2);
+  transform-origin: 50%;
 }
 
 .logo span {
   margin-left: 215px;
 }
 
+.logo span,
+.header-page-link:hover,
+.header-page-link:focus,
+.header-list .header-link:hover,
+.header-list .header-link:focus {
+  color: var(--accent-color);
+}
+
 .header-page-link {
   color: var(--primary-text-color);
   position: relative;
+  padding: 32px 0;
 
   transition: color var(--anim);
 }
@@ -90,23 +125,15 @@ a {
   height: 4px;
   border-radius: 2px;
   position: absolute;
-  bottom: -33px;
+  bottom: 0;
   left: 0;
-
+  z-index: 100;
   background-color: var(--accent-color);
-}
-
-.logo span,
-.header-page-link:hover,
-.header-page-link:focus,
-.header-list .header-link:hover,
-.header-list .header-link:focus {
-  color: var(--accent-color);
 }
 
 .header .header-link {
   color: var(--secondary-text-color);
-
+  padding: 32px 0;
   transition: color var(--anim);
 }
 
@@ -129,6 +156,7 @@ a {
 
 .header-item {
   fill: var(--secondary-text-color);
+  padding: 32px 0;
 }
 .mail-icon {
   fill: inherit;
@@ -284,21 +312,6 @@ a {
   margin-bottom: 30px;
 }
 
-.icon-locator::before {
-  background-image: url(../css/image/properties/locator-icon.png);
-}
-
-.icon-time::before {
-  background-image: url(../css/image/properties/time-icon.png);
-}
-
-.icon-graphic::before {
-  background-image: url(../css/image/properties/graphic-icon.png);
-}
-
-.icon-astronaut::before {
-  background-image: url(../css/image/properties/astronaut-icon.png);
-} */
 
 /* ----- Our activities ----- */
 
@@ -312,7 +325,7 @@ a {
 }
 
 .activities-item {
-  position: relative;  
+  position: relative;
 }
 
 .activities-label-box {
@@ -502,8 +515,6 @@ a {
 .portfolio-overlay-box {
   position: relative;
   overflow: hidden;
-  width: 370px;
-  height: 294px;
 }
 
 .hover-overlay-portfolio {
@@ -519,8 +530,6 @@ a {
   font-size: 18px;
   padding: 63px 24px;
   font-weight: 400;
-  line-height: calc(28 / 18);
-  letter-spacing: 0.03em;
   text-align: left;
   color: var(--pure-white);
   background-color: rgba(33, 150, 243, 0.9);
@@ -625,8 +634,6 @@ a {
   pointer-events: none;
 }
 
-
-
 .modal {
   position: absolute;
   height: 581px;
@@ -634,18 +641,39 @@ a {
   top: 50%;
   left: 50%;
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  
+  /* transform: translate(-50%, -50%) scale(1);
+  opacity: 1; */
+  animation-play-state: running;
+  animation: zoom-in 1s ease 200ms alternate both;
 
   background-color: #fff;
   transition: transform var(--anim), opacity var(--anim);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.4);
-  opacity: 0;
-  
+  animation-play-state: paused;
+  /* transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0; */
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  60% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .modal-btn {
