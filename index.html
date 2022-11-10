@@ -11,7 +11,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+  />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./css/styles.css" />
@@ -22,33 +25,38 @@
 <body id="page">
   <!-- header-->
   <header class="header">
-    <div class="container">
-      <a href="./index.html" class="logo logo-header"><span class="logo">Web</span>Studio</a>
+    <div class="header__container">
+      <div class="logo-box">
+        <a href="./index.html" class="logo logo-header link">
+          <span class="logo__part">Web</span>Studio
+        </a>
+      </div>
       <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-item">
-            <a href="./index.html" class="header-page-link current">Студія</a>
+        <ul class="header-list list">
+          <li class="header-list__item">
+            <a href="./index.html" 
+            class="header-list__link current">Студія</a>
           </li>
-          <li class="header-item">
-            <a href="./portfolio.html" class="header-page-link">Портфоліо</a>
+          <li class="header-list__item">
+            <a href="./portfolio.html" class="header-list__link link">Портфоліо</a>
           </li>
-          <li class="header-item">
-            <a href="" class="header-page-link">Контакти</a>
+          <li class="header-list__item">
+            <a href="" class="header-list__link">Контакти</a>
           </li>
         </ul>
       </nav>
-      <ul class="header-list header-contacts">
-        <li class="header-item header-mail">
-          <a href="mailto:info@devstudio.com" class="header-link">
-            <svg class="mail-icon header-icon" width="16" height="12">
+      <ul class="header-contacts list">
+        <li class="header-contacts__item header-mail">
+          <a href="mailto:info@devstudio.com" class="header-contacts__link link">
+            <svg class="header-contacts__icon mail-icon " width="16" height="12">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com
           </a>
         </li>
-        <li class="header-item header-tel">
-          <a href="tel:+380961111111" class="header-link">
-            <svg class="tel-icon header-icon" width="10" height="16">
+        <li class="header-contacts__item header-tel">
+          <a href="tel:+380961111111" class="header-contacts__link link">
+            <svg class="header-contacts__icon tel-icon" width="10" height="16">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
             +38 096 111 11 11
@@ -59,68 +67,68 @@
   </header>
   <main>
     <!-- hero -->
-    <section class="hero">
-      <div class="container overlay">
-        <h1 class="hero-title">Ефективні рішення для<br />вашого бізнесу</h1>
-        <button class="hero-btn btn animate__animated animate__heartBeat animate__delay-2s" type="button"
+    <section class="hero container">
+      <div class="hero__container container hero__overlay">
+        <h1 class="hero__title">Ефективні рішення для<br />вашого бізнесу</h1>
+        <button class="btn hero__btn  animate__animated animate__heartBeat animate__delay-2s" type="button"
           data-modal-open>Замовити послугу</button>
       </div>
     </section>
 
     <!-- Our properties -->
-    <section class="properties ">
+    <section class="properties container">
       <div class="container section">
         <h2 class="visual-hidden">Особливості</h2>
-        <ul class="properties-list section-list">
-          <li class="properties-item section-item">
-            <div class="properties-icon-box">
-              <svg class="tel-icon properties-icon" width="70" height="70">
+        <ul class="properties__list section__list ">
+          <li class="properties__item section__item">
+            <div class="properties__box">
+              <svg class="properties__icon tel-icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-antenna"></use>
               </svg>
             </div>
-            <h3 class="properties-subtitle section-subtitle">
+            <h3 class="properties-subtitle section__subtitle">
               УВАГА ДО ДЕТАЛЕЙ
             </h3>
-            <p class="properties-text">
+            <p class="properties__text">
               Ідейні міркування, і навіть початок повсякденної роботи з
               формування позиції.
             </p>
           </li>
-          <li class="properties-item section-item">
-            <div class="properties-icon-box">
-              <svg class="tel-icon properties-icon" width="70" height="70">
+          <li class="properties-item section__item">
+            <div class="properties__box">
+              <svg class="tel-icon properties__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-clock"></use>
               </svg>
             </div>
-            <h3 class="properties-subtitle section-subtitle">
+            <h3 class="properties-subtitle section__subtitle">
               ПУНКТУАЛЬНІСТЬ
             </h3>
-            <p class="properties-text">
+            <p class="properties__text">
               Завдання організації, особливо рамки і місце навчання кадрів
               тягне у себе.
             </p>
           </li>
-          <li class="properties-item section-item icon-diagram">
-            <div class="properties-icon-box">
-              <svg class="tel-icon properties-icon" width="70" height="70">
+          <li class="properties-item section__item icon-diagram">
+            <div class="properties__box">
+              <svg class="tel-icon properties__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-diagram"></use>
               </svg>
             </div>
-            <h3 class="properties-subtitle section-subtitle">ПЛАНУВАННЯ</h3>
-            <p class="properties-text">
+            <h3 class="properties-subtitle section__subtitle">ПЛАНУВАННЯ</h3>
+            <p class="properties__text">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
-          <li class="properties-item section-item icon-astronaut">
-            <div class="properties-icon-box">
-              <svg class="tel-icon properties-icon" width="70" height="70">
+          <li class="properties-item section__item icon-astronaut">
+            <div class="properties__box">
+              <svg class="tel-icon properties__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-astronaut"></use>
               </svg>
             </div>
-            <h3 class="properties-subtitle section-subtitle">
+            <h3 class="properties-subtitle section__subtitle">
               СУЧАСНІ ТЕХНОЛОГІЇ
             </h3>
-            <p class="properties-text">
+            <p class="properties__text">
               Значимість цих проблем настільки очевидна, що реалізація
               планових завдань.
             </p>
@@ -132,23 +140,23 @@
     <!-- Our activities -->
     <section class="activities ">
       <div class="container section">
-        <h2 class="activities-title section-title">Чим ми займаємося</h2>
-        <ul class="activities-list section-list">
-          <li class="activities-item section-item" data-aos="fade-right">
+        <h2 class="activities-title section__title">Чим ми займаємося</h2>
+        <ul class="activities-list section__list">
+          <li class="activities-item section__item" data-aos="fade-right">
             <img class="activities-img" src="./images/hands_and_charts.jpg" alt="Дві руки з екраном і таблицями"
               width="370" height="294" />
             <div class="activities-label-box">
               <p class="activities-text section-subtexttitle">Десктопні додатки</p>
             </div>
           </li>
-          <li class="activities-item section-item" data-aos="fade-right" data-aos-delay="100">
+          <li class="activities-item section__item" data-aos="fade-right" data-aos-delay="100">
             <img class="activities-img" src="./images/smartphone_in_hand.jpg" alt="Смартфон у руці" width="370"
               height="294" />
             <div class="activities-label-box">
               <p class="activities-text section-subtexttitle">Мобільні додатки</p>
             </div>
           </li>
-          <li class="activities-item section-item" data-aos="fade-right" data-aos-delay="200">
+          <li class="activities-item section__item" data-aos="fade-right" data-aos-delay="200">
             <img class="activities-img" src="./images/color_diagramm_on_screen.jpg"
               alt="Кольорова гексагональна діаграма на екрані" width="370" height="294" />
             <div class="activities-label-box">
@@ -162,11 +170,11 @@
     <!-- Our team -->
     <section class="team">
       <div class="container section">
-        <h2 class="team-title section-title">Наша команда</h2>
-        <ul class="team-list section-list">
-          <li class="team-item section-item" data-aos="fade-up">
+        <h2 class="team-title section__title">Наша команда</h2>
+        <ul class="team-list section__list">
+          <li class="team-item section__item" data-aos="fade-up">
             <img class="team-img" src="./images/product_designer.jpg" alt="Ігор Дем'яненко" width="270" height="260" />
-            <h3 class="team-subtitle section-subtitle">Ігор Дем'яненко</h3>
+            <h3 class="team-subtitle section__subtitle">Ігор Дем'яненко</h3>
             <p class="team-descr">Product Designer</p>
             <ul class="team-icon-container">
               <li class="team-icon-item">
@@ -199,9 +207,9 @@
               </li>
             </ul>
           </li>
-          <li class="team-item section-item" data-aos="fade-up" data-aos-delay="100">
+          <li class="team-item section__item" data-aos="fade-up" data-aos-delay="100">
             <img class="team-img" src="./images/frontend_developer.jpg" alt="Ольга Рєпіна" width="270" height="260" />
-            <h3 class="team-subtitle section-subtitle">Ольга Рєпіна</h3>
+            <h3 class="team-subtitle section__subtitle">Ольга Рєпіна</h3>
             <p class="team-descr">Frontend Developer</p>
             <ul class="team-icon-container">
               <li class="team-icon-item">
@@ -234,9 +242,9 @@
               </li>
             </ul>
           </li>
-          <li class="team-item section-item" data-aos="fade-up" data-aos-delay="200">
+          <li class="team-item section__item" data-aos="fade-up" data-aos-delay="200">
             <img class="team-img" src="./images/marketing.jpg" alt="Микола Тарасов" width="270" height="260" />
-            <h3 class="team-subtitle section-subtitle">Микола Тарасов</h3>
+            <h3 class="team-subtitle section__subtitle">Микола Тарасов</h3>
             <p class="team-descr">Marketing</p>
             <ul class="team-icon-container">
               <li class="team-icon-item">
@@ -269,9 +277,9 @@
               </li>
             </ul>
           </li>
-          <li class="team-item section-item" data-aos="fade-up" data-aos-delay="300">
+          <li class="team-item section__item" data-aos="fade-up" data-aos-delay="300">
             <img class="team-img" src="./images/ui_disigner.jpg" alt="Михайло Єрмаков" width="270" height="260" />
-            <h3 class="team-subtitle section-subtitle">Михайло Єрмаков</h3>
+            <h3 class="team-subtitle section__subtitle">Михайло Єрмаков</h3>
             <p class="team-descr">UI Designer</p>
             <ul class="team-icon-container">
               <li class="team-icon-item">
@@ -312,44 +320,44 @@
   <!-- Our clients -->
   <section class="clients">
     <div class="container section">
-      <h2 class="clients-title section-title">Постійні клієнти</h2>
-      <ul class="clients-list section-list list">
-        <li class="clients-item section-item" data-aos="fade-up">
+      <h2 class="clients-title section__title">Постійні клієнти</h2>
+      <ul class="clients-list section__list list">
+        <li class="clients-item section__item" data-aos="fade-up">
           <a href="" class="clients-link link">
             <svg class="clients-icon" width="106" height="60">
               <use href="./images/icons.svg#icon-client-1"></use>
             </svg>
           </a>
         </li>
-        <li class="clients-item section-item" data-aos="fade-up" data-aos-delay="100">
+        <li class="clients-item section__item" data-aos="fade-up" data-aos-delay="100">
           <a href="" class="clients-link link">
             <svg class="clients-icon" width="106" height="60">
               <use href="./images/icons.svg#icon-client-2"></use>
             </svg>
           </a>
         </li>
-        <li class="clients-item section-item" data-aos="fade-up" data-aos-delay="200">
+        <li class="clients-item section__item" data-aos="fade-up" data-aos-delay="200">
           <a href="" class="clients-link link">
             <svg class="clients-icon" width="106" height="60">
               <use href="./images/icons.svg#icon-client-3"></use>
             </svg>
           </a>
         </li>
-        <li class="clients-item section-item" data-aos="fade-up" data-aos-delay="200">
+        <li class="clients-item section__item" data-aos="fade-up" data-aos-delay="200">
           <a href="" class="clients-link link">
             <svg class="clients-icon" width="106" height="60">
               <use href="./images/icons.svg#icon-client-4"></use>
             </svg>
           </a>
         </li>
-        <li class="clients-item section-item" data-aos="fade-up" data-aos-delay="100">
+        <li class="clients-item section__item" data-aos="fade-up" data-aos-delay="100">
           <a href="" class="clients-link link">
             <svg class="clients-icon" width="106" height="60">
               <use href="./images/icons.svg#icon-client-5"></use>
             </svg>
           </a>
         </li>
-        <li class="clients-item section-item" data-aos="fade-up">
+        <li class="clients-item section__item" data-aos="fade-up">
           <a href="" class="clients-link link">
             <svg class="clients-icon" width="106" height="60">
               <use href="./images/icons.svg#icon-client-6"></use>
@@ -383,7 +391,7 @@
         </address>
       </div>
       <div class="footer-box-two">
-        <h2 class="footer-text section-subtitle">приєднуйтесь</h2>
+        <h2 class="footer-text section__subtitle">приєднуйтесь</h2>
         <ul class="team-icon-container">
           <li class="team-icon-item footer-icon">
             <a href="https://www.instagram.com">
@@ -416,7 +424,7 @@
         </ul>
       </div>
       <div class="footer-box-three">
-        <h2 class="footer-text section-subtitle">Підпишіться на розсилку</h2>
+        <h2 class="footer-text section__subtitle">Підпишіться на розсилку</h2>
         <form class="subscribtion-form form" name="subscribtion-form" autocomplete="on" novalidate>
 
           <label class="subscribtion-form-field" for="mail-name" placeholder="E-mail">
@@ -456,45 +464,45 @@
             </svg>
           </label>
           <label class="modal-form-field">
-            <input class="modal-form-input" name="tel-name" type="tel" required>
+            <input class="modal-form-input" name="tel-name" type="tel" id="tel-name" required>
             <span class="modal-form-label modal-text">Телефон</span>
             <svg class="modal-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </label>
           <label class="modal-form-field">
-            <input class="modal-form-input" 
-            name="mail-name" type="email"
-            placeholder="">
+            <input class="modal-form-input" name="mail-name" type="email" placeholder="">
             <span class="modal-form-label modal-text">Пошта</span>
             <svg class="modal-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </label>
           <label class="modal-form-field modal-textaria">
-            <textarea class="modal-textaria-input" name="comment-name" 
-            rows="5" 
-            placeholder="Введіть текст"
-            ></textarea>
+            <textarea class="modal-textaria-input" name="comment-name" rows="5" placeholder="Введіть текст"></textarea>
 
             <span class="modal-form-label modal-text">Коментар</span>
           </label>
         </div>
-        <div class="modal-checkbox-thumb">
-          <label class="modal-checkbox">
-            <input class="modal-checkbox-input "
-            type="checkbox"
-            name="checkbox-name">
-            Погоджуюся з розсилкою та приймаю
-            <a href="" class="document-link link">Умови договору</a>
-          </label>
-        </div>
+
+        <label class="modal-checkbox-thumb modal-text">
+          <input class="modal-checkbox-input " type="checkbox" name="checkbox-name" checked required>
+          <span class="modal-privat-policy">Погоджуюся з розсилкою та приймаю
+            <a href="" class="agreement-link link">Умови договору</a></span>
+        </label>
+
         <button class="modal-form-btn btn" type="submit">Відправити</button>
       </form>
 
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"
+    integrity="sha512-VpQwrlvKqJHKtIvpL8Zv6819FkTJyE1DoVNH0L2RLn8hUPjRjkS/bCYurZs0DX9Ybwu9oHRHdBZR9fESaq8Z8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/mask.js"></script>
   <script src="./js/modal.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./js/aos.js"></script>
