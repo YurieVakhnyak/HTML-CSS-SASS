@@ -464,20 +464,18 @@ body {
   margin-top: 12px;
 }
 
-.footer-btn-box {
+.subscribtion__btn-box {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-.icon-footer-mail {
+.subscribtion__icon {
   margin-left: 10px;
 }
 
-
-
-.subscribtion-form-input,
-.subscribtion-form-input:not(:placeholder-shown) {
+.subscribtion__input,
+.subscribtion__input:not(:placeholder-shown) {
   box-sizing: border-box;
   width: 358px;
   height: 50px;
@@ -495,7 +493,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* portfolio page */
+/* ----- portfolio page ----- */
 
 .portfolio-main .section {
   background-color: var(--white-tint-color);
@@ -697,6 +695,7 @@ body {
 .modal-textaria-input:focus,
 .modal-form-input:hover,
 .modal-form-input:focus {
+  outline: transparent;
   border-color: var(--accent-color);
   transition: var(--anim);
 }
@@ -706,8 +705,6 @@ body {
   fill: var(--accent-color);
   transition: var(--anim);
 }
-
-/* *:focus {outline:none !important} */
 
 .modal-form-input {
   height: 40px;

@@ -21,33 +21,38 @@
 
   <!-- header-->
   <header class="header">
-    <div class="container">
-      <a href="./index.html" class="logo logo-header"><span class="logo">Web</span>Studio</a>
+    <div class="header__container">
+      <div class="logo-box">
+        <a href="./index.html" class="logo logo-header link">
+          <span class="logo__part">Web</span>Studio
+        </a>
+      </div>
       <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-item">
-            <a href="./index.html" class="header-page-link">Студія</a>
+        <ul class="header-list list">
+          <li class="header-list__item">
+            <a href="./index.html" 
+            class="header-list__link">Студія</a>
           </li>
-          <li class="header-item">
-            <a href="./portfolio.html" class="header-page-link current">Портфоліо</a>
+          <li class="header-list__item">
+            <a href="./portfolio.html" class="header-list__link current link">Портфоліо</a>
           </li>
-          <li class="header-item">
-            <a href="" class="header-page-link">Контакти</a>
+          <li class="header-list__item">
+            <a href="" class="header-list__link">Контакти</a>
           </li>
         </ul>
       </nav>
-      <ul class="header-list header-contacts">
-        <li class="header-item header-mail">
-          <a href="mailto:info@devstudio.com" class="header-link">
-            <svg class="mail-icon header-icon" width="16" height="12">
+      <ul class="header-contacts list">
+        <li class="header-contacts__item header-mail">
+          <a href="mailto:info@devstudio.com" class="header-contacts__link link">
+            <svg class="header-contacts__icon mail-icon " width="16" height="12">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com
           </a>
         </li>
-        <li class="header-item header-tel">
-          <a href="tel:+380961111111" class="header-link">
-            <svg class="tel-icon header-icon" width="10" height="16">
+        <li class="header-contacts__item header-tel">
+          <a href="tel:+380961111111" class="header-contacts__link link">
+            <svg class="header-contacts__icon tel-icon" width="10" height="16">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
             +38 096 111 11 11
@@ -183,81 +188,86 @@
   </main>
 
 
- <!-- footer-->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-box-one">
-        <a href="./index.html" class="logo logo-footer"><span>Web</span>Studio</a>
-        <address class="footer-adress">
-          <ul class="footer-list">
-            <li class="footer-item">
-              <a href="https://goo.gl/maps/FquEhb5zbTScbEsGA" class="footer-link footer-map">м. Київ, пр-т Лесі
-                Українки,
-                26</a>
-            </li>
-            <li class="footer-item">
-              <a href="mailto:info@devstudio.com" class="footer-link footer-mail">info@devstudio.com</a>
-            </li>
-            <li class="footer-item">
-              <a href="tel:+380961111111" class="footer-link footer-tel">+38 096 111 11 11</a>
-            </li>
-          </ul>
-        </address>
-      </div>
-      <div class="footer-box-two">
-        <h2 class="footer-text section-subtitle">приєднуйтесь</h2>
-        <ul class="team-icon-container">
-          <li class="team-icon-item footer-icon">
-            <a href="https://www.instagram.com">
-              <svg class="team-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
+<!----- footer ----->
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__box-one">
+      <a href="./index.html" class="logo footer__logo">
+        <span class="logo__part">Web</span>Studio
+      </a>
+      <address class="adress">
+        <ul class="adress__list list">
+          <li class="adress__item">
+            <a href="https://goo.gl/maps/FquEhb5zbTScbEsGA" class="adress__link adress__map">м. Київ, пр-т Лесі
+              Українки,
+              26</a>
           </li>
-          <li class="team-icon-item footer-icon">
-            <a href="https://www.twitter.com">
-              <svg class="team-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
+          <li class="adress__item">
+            <a href="mailto:info@devstudio.com" 
+            class="adress__link adress__mail">info@devstudio.com
+          </a>
           </li>
-          <li class="team-icon-item footer-icon">
-            <a href="https://www.facebook.com">
-              <svg class="team-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="team-icon-item footer-icon">
-            <a href="https://www.linkedin.com">
-              <svg class="team-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
+          <li class="adress__item">
+            <a href="tel:+380961111111" 
+            class="adress__link adress__tel">+38 096 111 11 11
+          </a>
           </li>
         </ul>
-      </div>
-      <div class="footer-box-three">
-        <h2 class="footer-text section-subtitle">Підпишіться на розсилку</h2>
-        <form class="subscribtion-form form" name="subscribtion-form" autocomplete="on" novalidate>
-
-          <label class="subscribtion-form-field" for="mail-name" placeholder="E-mail">
-            <input class="subscribtion-form-input" type="email" name="user-mail" id="mail-name" placeholder="E-mail">
-            <button class="btn" type="submit">
-          </label>
-          <div class="footer-btn-box">
-            Підписатися
-            <svg class="icon-footer-mail" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </div>
-          </button>
-
-        </form>
-      </div>
+      </address>
     </div>
+    <div class="footer__box-two">
+      <h2 class="footer__text section__subtitle">приєднуйтесь</h2>
+      <ul class="socials__thumb">
+        <li class="socials__item footer__icon">
+          <a href="https://www.instagram.com">
+            <svg class="socials__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item footer__icon">
+          <a href="https://www.twitter.com">
+            <svg class="socials__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item footer__icon">
+          <a href="https://www.facebook.com">
+            <svg class="socials__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item footer__icon">
+          <a href="https://www.linkedin.com">
+            <svg class="socials__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__box-three">
+      <h2 class="footer__text section__subtitle">Підпишіться на розсилку</h2>
+      <form class="subscribtion form" name="subscribtion-form" autocomplete="on" novalidate>
+        <label class="subscribtion__field" for="mail-name" placeholder="E-mail">
+          <input class="subscribtion__input" type="email" name="user-mail" id="mail-name" placeholder="E-mail">
+          <button class="btn" type="submit">
+        </label>
+        <div class="subscribtion__btn-box">
+          Підписатися
+          <svg class="subscribtion__icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-send"></use>
+          </svg>
+        </div>
+        </button>
 
-  </footer>
+      </form>
+    </div>
+  </div>
+
+</footer>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./js/aos.js"></script>
 </body>
