@@ -1,1 +1,1039 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --white-grey-color: #f5f4fa;
+  --white-tint-color: #f5f5f5;
+  --grey-color: #ececec;
+  --dark-bcg-color: #2f303a;
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+  --grey-icon-color: #afb1b8;
+  --white-transparence: rgba(255, 255, 255, 0.6);
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animate-delay: 2s;
+}
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size (opinionated).
+*/
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+/**
+1. Remove the margin in all browsers.
+2. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  margin: 0; /* 1 */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 2 */
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.visual-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+body {
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+#page.no-scroll {
+  overflow: hidden;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style-type: none; /* Прибираємо маркери */
+}
+
+a {
+  text-decoration: none; /* Відміняємо підкреслення посилань */
+}
+
+.section__title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section__list {
+  display: flex;
+  justify-content: center;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+
+.section__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 1600px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.btn {
+  color: var(--pure-white);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  height: 50px;
+  min-width: 216px;
+  border-radius: 4px;
+  border-width: 0px;
+}
+
+.logo__box {
+  margin-left: 215px;
+  transition: transform 500ms;
+}
+.logo__box:hover {
+  transform: translate(-5%) scale(1.1);
+  transform-origin: 50%;
+}
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.24;
+  color: var(--pure-black);
+}
+
+.logo__part {
+  color: var(--accent-color);
+}
+
+.header__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 1600px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--grey-color);
+  min-height: 80px;
+  background-color: var(--pure-white);
+}
+
+.header__nav {
+  margin-left: 93px;
+}
+
+.header__contacts {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: 215px;
+  color: var(--secondary-text-color);
+}
+
+.header__navi-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.header__navi-link {
+  position: relative;
+  padding: 32px 0;
+  color: currentColor;
+  transition: color var(--anim);
+}
+.header__navi-link:hover, .header__navi-link:focus {
+  color: var(--accent-color);
+}
+.header__navi-link--current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  z-index: 100;
+  background-color: var(--accent-color);
+}
+
+.header__contacts-link {
+  display: flex;
+  align-items: center;
+  color: currentColor;
+  fill: currentColor;
+  padding: 32px 0;
+  transition: color var(--anim), fill var(--anim);
+}
+.header__contacts-link:hover, .header__contacts-link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.header__contacts-icon {
+  margin-right: 10px;
+}
+
+.hero__container {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.hero__overlay {
+  max-width: 1600px;
+  min-height: 600px;
+  background-color: var(--dark-bcg-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../css/image/hero/hero-bcg-img.jpg);
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  color: var(--pure-white);
+  text-transform: uppercase;
+  font-weight: 900px;
+  font-size: 44px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
+}
+
+.properties__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+}
+
+.properties__box {
+  width: 270px;
+  height: 120px;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: var(--white-grey-color);
+  transition: box-shadow var(--anim);
+}
+.properties__box:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.properties__icon {
+  position: relative;
+  top: 25px;
+  border-radius: 0px;
+}
+
+/*----- global settings -----*/
+/*----- header -----*/
+/*----- hero -----*/
+/*----- properties -----*/
+/* ----- Our activities ----- */
+.activities__section {
+  padding-top: 0;
+}
+
+.activities__item {
+  position: relative;
+}
+
+.activities__text {
+  text-transform: uppercase;
+  color: var(--pure-white);
+}
+
+.activities__label-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 370px;
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* ----- team ----- */
+.team__section {
+  background-color: var(--white-grey-color);
+}
+
+.team__item {
+  width: 270px;
+  height: 428px;
+  background-color: var(--pure-white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.team__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1875;
+  text-align: center;
+}
+
+.team__img {
+  margin-bottom: 30px;
+}
+
+.team__descr {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1875;
+  text-align: center;
+}
+
+/* ----- socials ----- */
+.socials__thumb {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  margin: 16px 32px 30px;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0px;
+  fill: var(--grey-icon-color);
+  transition: background-color var(--anim);
+}
+
+.socials__item:hover {
+  fill: var(--pure-white);
+  background-color: var(--accent-color);
+}
+
+.socials__icon {
+  position: relative;
+  fill: inherit;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill var(--anim);
+}
+
+/* ----- clients ----- */
+.clients__item {
+  height: 92px;
+  width: 170px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  fill: var(--grey-icon-color);
+  transition: fill var(--anim), border-color var(--anim);
+}
+
+.clients__item:hover {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.clients__icon {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  fill: inherit;
+  transition: fill var(--anim), border-color var(--anim);
+}
+
+/* ----- footer ----- */
+.footer__container {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--dark-bcg-color);
+}
+
+.footer__box-one {
+  margin-left: 215px;
+  min-width: 107px;
+}
+
+.footer__logo {
+  display: block;
+  color: var(--pure-white);
+  margin-bottom: 20px;
+}
+
+.adress {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+}
+
+.adress__item:not(:last-child) {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.adress__map {
+  color: var(--pure-white);
+}
+
+.adress__mail {
+  color: #d9d9d9;
+}
+
+.adress__tel {
+  color: var(--white-transparence);
+}
+
+.footer__box-two {
+  width: 206px;
+  min-height: 80px;
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
+.footer__box-two .socials__thumb {
+  margin: 0;
+}
+
+.footer__icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--pure-white);
+}
+
+.footer__text {
+  text-transform: uppercase;
+  color: var(--pure-white);
+  margin-bottom: 20px;
+}
+
+.footer__box-three {
+  margin-left: auto;
+  margin-right: 215px;
+  margin-top: 12px;
+}
+
+.subscribtion__btn-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.subscribtion__icon {
+  margin-left: 10px;
+}
+
+.subscribtion__input,
+.subscribtion__input:not(:placeholder-shown) {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 0 10px 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ----- portfolio page ----- */
+.portfolio-main .section {
+  background-color: var(--white-tint-color);
+}
+
+.portfolio-btn-list {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-text-color);
+  background-color: var(--white-grey-color);
+  margin-bottom: 50px;
+  gap: 8px;
+}
+
+.btn-portfolio {
+  display: inline-block;
+  transition: color var(--anim), background-color var(--anim), box-shadow var(--anim);
+}
+
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+  color: var(--white-tint-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-flex-el,
+.portfolio-flex-el {
+  transition: box-shadow var(--anim);
+}
+
+.portfolio-overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-overlay-portfolio {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 63px 24px;
+  font-weight: 400;
+  text-align: left;
+  color: var(--pure-white);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--anim);
+}
+
+.portfolio-flex-el:hover,
+.portfolio-flex-el:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.portfolio-flex-el:hover .hover-overlay-portfolio {
+  transform: translateY(0%);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-text-cover {
+  padding: 20px 24px;
+  background-color: var(--pure-white);
+  outline: 1px solid #eeeeee;
+}
+
+.portfolio-subtitle {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.portfolio-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+.button {
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  height: 38px;
+  min-width: 50px;
+  left: 957px;
+  top: 174px;
+  border-radius: 4px;
+  border-width: 0px;
+}
+
+/* colors */
+.properties-text,
+.portfolio-text,
+.team-text,
+.properties-text,
+.team-description {
+  color: var(--secondary-text-color);
+}
+
+/* ----- modal window ----- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 48, 58, 0.8);
+  transition: transform var(--anim), opacity var(--anim), visibility var(--anim);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.4) rotate(180deg);
+}
+
+.modal {
+  position: absolute;
+  height: 581px;
+  width: 528px;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  /* transition: transform var(--anim); */
+  /* animation-play-state: running;
+    animation: zoom-in 1s ease 200ms alternate both; */
+  background-color: #fff;
+  transition: transform var(--anim), opacity var(--anim), visibility var(--anim);
+}
+
+.modal-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 30px;
+}
+
+.modal-textaria-input {
+  resize: none;
+}
+
+.modal-form-field {
+  position: relative;
+}
+
+.modal-textaria-input,
+.modal-form-input {
+  box-sizing: border-box;
+  width: 448px;
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0.2);
+  color: var(--primary-text-color);
+}
+
+.modal-textaria-input:hover,
+.modal-textaria-input:focus,
+.modal-form-input:hover,
+.modal-form-input:focus {
+  outline: transparent;
+  border-color: var(--accent-color);
+  transition: var(--anim);
+}
+
+.modal-form-input:hover ~ .modal-icon,
+.modal-form-input:focus ~ .modal-icon {
+  fill: var(--accent-color);
+  transition: var(--anim);
+}
+
+.modal-form-input {
+  height: 40px;
+  padding-left: 41px;
+  padding-right: 10px;
+}
+
+.modal-textaria-input {
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.modal-textaria-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  /* position: absolute;
+    top: 12px;
+    left: 16px; */
+}
+
+.modal-checkbox-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  user-select: none;
+  border-color: var(--primary-text-color);
+  border-width: 2px;
+}
+
+.modal-privat-policy {
+  margin-left: 8px;
+}
+
+.agreement-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.modal-form-group {
+  margin-left: 41px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  fill: var(--primary-text-color);
+}
+
+.modal-form-label {
+  position: absolute;
+  top: -16px;
+  left: 0;
+}
+
+.modal-form-label:not(:placeholder-shown),
+.modal-text {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--secondary-text-color);
+}
+
+.modal-form-label:not(:placeholder-shown) {
+  color: var(--primary-text-color);
+}
+
+.modal .modal-form-btn {
+  margin-left: 25%;
+}
+
+/* .backdrop.is-hidden .modal {
+    animation-play-state: paused;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+  } */
+/* @keyframes zoom-in {
+    0% {
+      transform: translate(-50%, -50%) scale(0.3);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+
+    60% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  } */
+.modal-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pure-white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  top: 8px;
+  right: 8px;
+  /* top: 23px;
+    right: -6px;
+    transform: translate(-50%, -50%); */
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  cursor: pointer;
+  fill: var(--accent-color);
+  transition: var(--anim);
+}/*# sourceMappingURL=main.css.map */
