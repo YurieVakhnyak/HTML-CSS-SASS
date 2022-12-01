@@ -520,17 +520,16 @@ a {
 
 /* colors */
 
-.properties-text,
+/* .properties-text,
 .portfolio-text,
 .team-text,
-.properties-text,
 .team-description {
   color: var(--secondary-text-color);
-}
+} */
 
 /* ----- modal window ----- */
 
-.backdrop {
+/* .backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -564,9 +563,7 @@ a {
   left: 50%;
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  /* transition: transform var(--anim); */
-  /* animation-play-state: running;
-  animation: zoom-in 1s ease 200ms alternate both; */
+  
   background-color: #fff;
   transition: transform var(--anim), opacity var(--anim), visibility var(--anim);
 }
@@ -634,9 +631,7 @@ a {
 
 .modal-textaria-input::placeholder {
   color: rgba(117, 117, 117, 0.5);
-  /* position: absolute;
-  top: 12px;
-  left: 16px; */
+  
 }
 
 .modal-checkbox-thumb {
@@ -697,7 +692,7 @@ a {
 
 .modal .modal-form-btn {
   margin-left: 25%;
-}
+} */
 
 /* .backdrop.is-hidden .modal {
   animation-play-state: paused;
@@ -725,7 +720,7 @@ a {
   }
 } */
 
-.modal-btn {
+/* .modal-btn {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -740,9 +735,6 @@ a {
   top: 8px;
   right: 8px;
 
-  /* top: 23px;
-  right: -6px;
-  transform: translate(-50%, -50%); */
 }
 
 .modal-btn:hover,
@@ -750,4 +742,4 @@ a {
   cursor: pointer;
   fill: var(--accent-color);
   transition: var(--anim);
-}
+} */
