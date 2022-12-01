@@ -11,14 +11,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
-    <!-- <link
+  <!-- <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
   /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./css/main.min.css" />
-  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <!-- Main page -->
@@ -35,8 +34,7 @@
       <nav class="header__nav navi">
         <ul class="header__navi-list list">
           <li class="navi__item">
-            <a href="./index.html" 
-            class="header__navi-link header__navi-link--current">Студія</a>
+            <a href="./index.html" class="header__navi-link header__navi-link--current">Студія</a>
           </li>
           <li class="navi__item">
             <a href="./portfolio.html" class="header__navi-link link">Портфоліо</a>
@@ -66,8 +64,8 @@
       </ul>
     </div>
   </header>
-  
-    <!-- hero -->
+
+  <!-- hero -->
   <main>
     <section class="hero container">
       <div class="hero__container container hero__overlay">
@@ -386,14 +384,12 @@
                 26</a>
             </li>
             <li class="adress__item">
-              <a href="mailto:info@devstudio.com" 
-              class="adress__link adress__mail">info@devstudio.com
-            </a>
+              <a href="mailto:info@devstudio.com" class="adress__link adress__mail">info@devstudio.com
+              </a>
             </li>
             <li class="adress__item">
-              <a href="tel:+380961111111" 
-              class="adress__link adress__tel">+38 096 111 11 11
-            </a>
+              <a href="tel:+380961111111" class="adress__link adress__tel">+38 096 111 11 11
+              </a>
             </li>
           </ul>
         </address>
@@ -455,49 +451,50 @@
   <!-- Modal window -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-btn" data-modal-close>
-        <svg class="modal-icon-close" width="18px" height="18px">
+      <button class="modal__btn" data-modal-close>
+        <svg class="modal__icon-close" width="18px" height="18px">
           <use href="./images/icons.svg#icon-close-x"></use>
         </svg>
       </button>
-      <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-      <form class="modal-form">
-        <div class="modal-form-group">
-          <label class="modal-form-field">
-            <input class="modal-form-input modal__input" name="user-name" type="text" required>
-            <span class="modal-form-label modal-text">Ім'я</span>
-            <svg class="modal-icon" width="18px" height="18px">
+      <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+      <form class="modal__form">
+        <div class="modal__form-group">
+          <label class="modal__form-field">
+            <input class="modal__form-input modal__input" name="user-name" type="text" required>
+            <span class="modal__form-label modal__text">Ім'я</span>
+            <svg class="modal__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
-          <label class="modal-form-field">
-            <input class="modal-form-input modal__input" name="tel-name" type="tel" id="tel-name" required>
-            <span class="modal-form-label modal-text">Телефон</span>
-            <svg class="modal-icon" width="18px" height="18px">
+          <label class="modal__form-field">
+            <input class="modal__form-input modal__input" name="tel-name" type="tel" id="tel-name" required>
+            <span class="modal__form-label modal__text">Телефон</span>
+            <svg class="modal__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </label>
-          <label class="modal-form-field">
-            <input class="modal-form-input modal__input" name="mail-name" type="email" placeholder="">
-            <span class="modal-form-label modal-text">Пошта</span>
-            <svg class="modal-icon" width="18px" height="18px">
+          <label class="modal__form-field">
+            <input class="modal__form-input modal__input" name="mail-name" type="email" placeholder="">
+            <span class="modal__form-label modal__text">Пошта</span>
+            <svg class="modal__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </label>
-          <label class="modal-form-field modal-textaria">
-            <textarea class="modal-textaria-input modal__input" name="comment-name" rows="5" placeholder="Введіть текст"></textarea>
+          <label class="modal__form-field modal__textaria">
+            <textarea class="modal__textaria-input modal__input" name="comment-name" rows="5"
+              placeholder="Введіть текст"></textarea>
 
-            <span class="modal-form-label modal-text">Коментар</span>
+            <span class="modal__form-label modal__text">Коментар</span>
           </label>
         </div>
 
-        <label class="modal-checkbox-thumb modal-text">
-          <input class="modal-checkbox-input " type="checkbox" name="checkbox-name" checked required>
-          <span class="modal-privat-policy">Погоджуюся з розсилкою та приймаю
+        <label class="modal__checkbox-thumb modal__text">
+          <input class="modal__checkbox-input " type="checkbox" name="checkbox-name" checked required>
+          <span class="modal__privat-policy">Погоджуюся з розсилкою та приймаю
             <a href="" class="agreement-link link">Умови договору</a></span>
         </label>
 
-        <button class="modal-form-btn btn" type="submit">Відправити</button>
+        <button class="modal__form-btn btn" type="submit">Відправити</button>
       </form>
 
     </div>
