@@ -332,7 +332,6 @@ a {
   width: 1600px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: auto;
 }
 
 .section {
@@ -640,11 +639,12 @@ a {
 .header__container {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 15px;
   z-index: 100;
   width: 1600px;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1428571429;
@@ -656,14 +656,6 @@ a {
 
 .header__nav {
   margin-left: 93px;
-}
-
-.header__contacts {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;
-  margin-right: 215px;
-  color: var(--secondary-text-color);
 }
 
 .header__navi-list {
@@ -694,6 +686,14 @@ a {
   background-color: var(--accent-color);
 }
 
+.header__contacts {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: 215px;
+  color: var(--secondary-text-color);
+}
+
 .header__contacts-link {
   display: flex;
   align-items: center;
@@ -704,10 +704,10 @@ a {
 }
 .header__contacts-link:hover, .header__contacts-link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
 .header__contacts-icon {
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -785,6 +785,7 @@ a {
 }
 
 .team__section {
+  margin-left: 15px;
   background-color: var(--white-grey-color);
 }
 

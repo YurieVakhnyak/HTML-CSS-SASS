@@ -13,9 +13,8 @@
 
 .portfolio__btn {
   display: inline-block;
-
   transition: color var(--anim), background-color var(--anim),
-    box-shadow var(--anim);
+  box-shadow var(--anim);
 
   &:hover,
   &:focus {
