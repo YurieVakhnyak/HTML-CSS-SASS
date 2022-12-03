@@ -1,5 +1,5 @@
-.activities__section {
-    padding-top: 0;
+.activities {
+  @include section(0, 94px);
   }
   
   .activities__item {

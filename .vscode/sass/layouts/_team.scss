@@ -1,5 +1,5 @@
 .team__section {
-  margin-left: 15px;
+  @include section;  
   background-color: var(--white-grey-color);
 }
 

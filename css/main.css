@@ -334,11 +334,6 @@ a {
   padding-right: 15px;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .btn {
   color: var(--pure-white);
   background-color: var(--accent-color);
@@ -711,12 +706,15 @@ a {
   margin-right: 10px;
 }
 
-.hero__container {
-  text-align: center;
+.hero {
   padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero__overlay {
+  margin-left: 15px;
+  margin-right: 15px;
   max-width: 1600px;
   min-height: 600px;
   background-color: var(--dark-bcg-color);
@@ -732,6 +730,11 @@ a {
   line-height: 1.3636363636;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
+}
+
+.properties {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .properties__text {
@@ -759,8 +762,9 @@ a {
   border-radius: 0px;
 }
 
-.activities__section {
+.activities {
   padding-top: 0;
+  padding-bottom: 94px;
 }
 
 .activities__item {
@@ -785,7 +789,8 @@ a {
 }
 
 .team__section {
-  margin-left: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--white-grey-color);
 }
 

@@ -1,0 +1,9 @@
+@mixin section ($padding-top: 94px, $padding-bottom: 94px) {
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+  }
+
+@mixin tabulation ($margin-left: 15px, $margin-right: 15px) {
+  margin-left: 15px;
+  margin-right: 15px;
+}
