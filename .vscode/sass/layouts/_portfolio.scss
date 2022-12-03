@@ -1,5 +1,7 @@
 .portfolio {
   background-color: var(--white-tint-color);
+
+  @include section;
 }
 
 .portfolio__btn-list {
@@ -33,7 +35,7 @@
   }
 }
 
-.portfolio__flex-el:hover .overlay {
+.portfolio__flex-element:hover .overlay {
   transform: translateY(0%);
 }
 

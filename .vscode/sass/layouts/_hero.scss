@@ -4,7 +4,7 @@
   }
   
   .hero__overlay {
-    @include tabulation;
+    
     max-width: 1600px;
     min-height: 600px;    
     background-color: var(--dark-bcg-color);

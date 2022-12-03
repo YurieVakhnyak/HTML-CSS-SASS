@@ -1,3 +1,7 @@
+.clients {
+  @include section;
+}
+
 .clients__item {
     height: 92px;
     width: 170px;

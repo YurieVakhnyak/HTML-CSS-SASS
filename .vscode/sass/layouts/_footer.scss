@@ -1,7 +1,7 @@
 .footer__container {
     display: flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    
+    @include section(60px, 60px);
     background-color: var(--dark-bcg-color);
   }
   
