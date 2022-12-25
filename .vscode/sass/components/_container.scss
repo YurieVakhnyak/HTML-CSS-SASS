@@ -6,6 +6,11 @@
     margin-left: auto;
     margin-right: auto;    
    
+    @media screen and (max-width: 320px) {
+      min-width: 290px;
+      
+    }
+
 
     // break-point mobile
     @media screen and (min-width: 480px) {
@@ -13,13 +18,13 @@
     }
 
       // break-point tablet
-    @media screen and (min-width: 738px) {
-      width: 768px;
+    @media screen and (min-width: 768px) {
+      width: 738px
     }
     
       // break-point desktop
-    @media screen and (min-width: 1600px) {
-      width: 1600px;
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
     }
 
   }

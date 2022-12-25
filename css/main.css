@@ -302,7 +302,7 @@ a {
   text-decoration: none; /* Відміняємо підкреслення посилань */
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .section__title {
     font-size: 36px;
     line-height: 42px;
@@ -319,17 +319,7 @@ a {
 }
 
 .section__item {
-  outline: 2px solid greenyellow;
-}
-@media screen and (min-width: 738px) {
-  .section__item {
-    max-width: 354px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .section__item {
-    max-width: 270px;
-  }
+  text-align: center;
 }
 
 .section__subtitle {
@@ -339,7 +329,7 @@ a {
   margin-bottom: 10px;
   text-align: center;
 }
-@media screen and (min-width: 738px) {
+@media screen and (min-width: 768px) {
   .section__subtitle {
     text-align: left;
   }
@@ -352,19 +342,24 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 320px) {
+  .container {
+    min-width: 290px;
+  }
+}
 @media screen and (min-width: 480px) {
   .container {
     width: 450px;
   }
 }
-@media screen and (min-width: 738px) {
+@media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 738px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .container {
-    width: 1600px;
+    width: 1200px;
   }
 }
 
@@ -790,13 +785,7 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 480px) {
-  .properties {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-@media screen and (min-width: 738px) {
+@media screen and (max-width: 1599px) {
   .properties {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -806,6 +795,30 @@ a {
   .properties {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+}
+
+.properties__thumb {
+  outline: 2px solid greenyellow;
+}
+@media screen and (max-width: 319px) {
+  .properties__thumb {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .properties__thumb {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .properties__thumb {
+    width: 324px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .properties__thumb {
+    width: 270px;
   }
 }
 
@@ -832,6 +845,16 @@ a {
     min-width: 450px;
   }
 }
+@media screen and (min-width: 768px) {
+  .properties__box {
+    min-width: 324px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .properties__box {
+    min-width: 270px;
+  }
+}
 
 .properties__icon {
   position: relative;
@@ -842,6 +865,11 @@ a {
 .activities {
   padding-top: 0;
   padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .activities {
+    display: none;
+  }
 }
 
 .activities__item {
