@@ -67,10 +67,10 @@
 
   <main>
     <!-- hero -->
-    <section class="hero hero__overlay">      
-        <h1 class="hero__title">Ефективні рішення для<br />вашого бізнесу</h1>
-        <button class="btn hero__btn  animate__animated animate__heartBeat animate__delay-2s" type="button"
-          data-modal-open>Замовити послугу</button>      
+    <section class="hero hero__overlay">
+      <h1 class="hero__title">Ефективні рішення для<br />вашого бізнесу</h1>
+      <button class="btn hero__btn  animate__animated animate__heartBeat animate__delay-2s" type="button"
+        data-modal-open>Замовити послугу</button>
     </section>
 
     <!-- Our properties -->
@@ -181,7 +181,21 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="section__list">
           <li class="team__item section__item" data-aos="fade-up">
-            <img class="team__img" src="./images/product_designer.jpg" alt="Ігор Дем'яненко" width="270" height="260" />
+            <picture>
+              <source srcset="./images/product_designer-450.jpg 450w" 
+              media="(max-width: 767px)" 
+              >
+              <source 
+              srcset="
+              ./images/product_designer-354.jpg 354w"              
+              media="(min-width: 768px) and (max-width: 1199px)"
+              type="image/jpeg" />
+              <img class="team__img" 
+              src="./images/product_designer-270.jpg"  
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"            
+              alt="Ігор Дем'яненко"  />
+            </picture>
+
             <h3 class="team__subtitle section__subtitle">Ігор Дем'яненко</h3>
             <p class="team__descr">Product Designer</p>
             <ul class="socials__thumb">
@@ -322,60 +336,60 @@
           </li>
         </ul>
       </div>
-    </section>  
+    </section>
 
-  <!-- Our clients -->
-  <section class="clients">
-    <div class="container">
-      <h2 class="section__title">Постійні клієнти</h2>
-      <ul class="section__list list">
-        <li class="clients__item" data-aos="fade-up">
-          <a href="" class="clients__link link">
-            <svg class="clients__icon" width="106" height="60">
-              <use href="./images/icons.svg#icon-client-1"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item" data-aos="fade-up" data-aos-delay="100">
-          <a href="" class="clients__link link">
-            <svg class="clients__icon" width="106" height="60">
-              <use href="./images/icons.svg#icon-client-2"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item" data-aos="fade-up" data-aos-delay="200">
-          <a href="" class="clients__link link">
-            <svg class="clients__icon" width="106" height="60">
-              <use href="./images/icons.svg#icon-client-3"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item" data-aos="fade-up" data-aos-delay="200">
-          <a href="" class="clients__link link">
-            <svg class="clients__icon" width="106" height="60">
-              <use href="./images/icons.svg#icon-client-4"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item" data-aos="fade-up" data-aos-delay="100">
-          <a href="" class="clients__link link">
-            <svg class="clients__icon" width="106" height="60">
-              <use href="./images/icons.svg#icon-client-5"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients__item" data-aos="fade-up">
-          <a href="" class="clients__link link">
-            <svg class="clients__icon" width="106" height="60">
-              <use href="./images/icons.svg#icon-client-6"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+    <!-- Our clients -->
+    <section class="clients">
+      <div class="container">
+        <h2 class="section__title">Постійні клієнти</h2>
+        <ul class="section__list list">
+          <li class="clients__item" data-aos="fade-up">
+            <a href="" class="clients__link link">
+              <svg class="clients__icon" width="106" height="60">
+                <use href="./images/icons.svg#icon-client-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item" data-aos="fade-up" data-aos-delay="100">
+            <a href="" class="clients__link link">
+              <svg class="clients__icon" width="106" height="60">
+                <use href="./images/icons.svg#icon-client-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item" data-aos="fade-up" data-aos-delay="200">
+            <a href="" class="clients__link link">
+              <svg class="clients__icon" width="106" height="60">
+                <use href="./images/icons.svg#icon-client-3"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item" data-aos="fade-up" data-aos-delay="200">
+            <a href="" class="clients__link link">
+              <svg class="clients__icon" width="106" height="60">
+                <use href="./images/icons.svg#icon-client-4"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item" data-aos="fade-up" data-aos-delay="100">
+            <a href="" class="clients__link link">
+              <svg class="clients__icon" width="106" height="60">
+                <use href="./images/icons.svg#icon-client-5"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients__item" data-aos="fade-up">
+            <a href="" class="clients__link link">
+              <svg class="clients__icon" width="106" height="60">
+                <use href="./images/icons.svg#icon-client-6"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
 
-    </div>
-  </section>
-</main>
+      </div>
+    </section>
+  </main>
 
   <!----- footer ----->
   <!-- <footer class="footer">
