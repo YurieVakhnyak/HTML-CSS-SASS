@@ -7,6 +7,10 @@
     line-height: calc(30 / 16);
     letter-spacing: 0.06em;
     text-align: center;
+    // break-point
+  @media screen and (max-width: 1199px) {
+    min-width: 200px;
+  }
     height: 50px;
     min-width: 216px;
     border-radius: 4px;

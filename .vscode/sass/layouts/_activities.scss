@@ -1,9 +1,12 @@
 .activities {
-  @include section(0, 94px);
-
-    @media screen and (max-width: 1199px) {
-      display: none;
+      @media screen and (max-width: 1199px) {
+      display: none;      
     }
+    .container {
+    @media screen and (min-width: 1200px) {
+      @include section(0, 94px);    
+    }
+  }
   }
   
   .activities__item {

@@ -302,10 +302,18 @@ a {
   text-decoration: none; /* Відміняємо підкреслення посилань */
 }
 
+@media screen and (max-width: 1199px) {
+  .section__title {
+    font-size: 28px;
+    line-height: 1.1428571429;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .section__title {
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.1666666667;
     text-align: center;
     margin-bottom: 50px;
   }
@@ -319,7 +327,27 @@ a {
 }
 
 .section__item {
-  text-align: center;
+  outline: 2px solid greenyellow;
+}
+@media screen and (max-width: 319px) {
+  .section__item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .section__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section__item {
+    width: 324px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__item {
+    width: 270px;
+  }
 }
 
 .section__subtitle {
@@ -360,6 +388,14 @@ a {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -376,6 +412,11 @@ a {
   min-width: 216px;
   border-radius: 4px;
   border-width: 0px;
+}
+@media screen and (max-width: 1199px) {
+  .btn {
+    min-width: 200px;
+  }
 }
 
 .btn-filter {
@@ -418,8 +459,7 @@ a {
   display: flex;
   justify-content: space-between;
   width: 206px;
-  height: 44px;
-  margin: 16px 32px 30px;
+  margin: 16px auto 30px;
 }
 
 .socials__item {
@@ -758,17 +798,32 @@ a {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__overlay {
+  height: 600px;
   max-width: 1600px;
-  min-height: 600px;
   background-color: var(--dark-bcg-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../css/image/hero/hero-bcg-img.jpg);
   background-repeat: no-repeat;
+}
+@media screen and (max-width: 1199px) {
+  .hero__overlay {
+    height: 400px;
+  }
 }
 
 .hero__title {
@@ -780,45 +835,10 @@ a {
   letter-spacing: 0.06em;
   margin-bottom: 30px;
 }
-
-.properties {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media screen and (max-width: 1599px) {
-  .properties {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .properties {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
-
-.properties__thumb {
-  outline: 2px solid greenyellow;
-}
-@media screen and (max-width: 319px) {
-  .properties__thumb {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 480px) {
-  .properties__thumb {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .properties__thumb {
-    width: 324px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .properties__thumb {
-    width: 270px;
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.6153846154;
   }
 }
 
@@ -862,13 +882,15 @@ a {
   border-radius: 0px;
 }
 
-.activities {
-  padding-top: 0;
-  padding-bottom: 94px;
-}
 @media screen and (max-width: 1199px) {
   .activities {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .activities .container {
+    padding-top: 0;
+    padding-bottom: 94px;
   }
 }
 
@@ -894,14 +916,10 @@ a {
 }
 
 .team__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: var(--white-grey-color);
 }
 
 .team__item {
-  width: 270px;
-  height: 428px;
   background-color: var(--pure-white);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -925,18 +943,27 @@ a {
   color: var(--secondary-text-color);
 }
 
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .clients__item {
   height: 92px;
-  width: 170px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
   fill: var(--grey-icon-color);
   transition: fill var(--anim), border-color var(--anim);
+}
+@media screen and (min-width: 480px) {
+  .clients__item {
+    width: 194px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: 216px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: 170px;
+  }
 }
 .clients__item:hover, .clients__item:focus {
   border: 1px solid var(--accent-color);

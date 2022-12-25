@@ -1,30 +1,32 @@
 .container {
-    outline: 2px solid salmon;
+  outline: 2px solid salmon;
 
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;    
-   
-    @media screen and (max-width: 320px) {
-      min-width: 290px;
-      
-    }
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 
-
-    // break-point mobile
-    @media screen and (min-width: 480px) {
-      width: 450px;
-    }
-
-      // break-point tablet
-    @media screen and (min-width: 768px) {
-      width: 738px
-    }
-    
-      // break-point desktop
-    @media screen and (min-width: 1200px) {
-      width: 1200px;
-    }
-
+  @media screen and (max-width: 320px) {
+    min-width: 290px;
   }
+
+  // break-point mobile
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  // break-point tablet
+  @media screen and (min-width: 768px) {
+    width: 738px;
+  }
+
+  // break-point desktop
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    @include section;
+  }
+
+  @media screen and (max-width: 1199px) {
+    @include section(60px, 60px);
+  }
+}
