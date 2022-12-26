@@ -435,8 +435,17 @@ a {
 }
 
 .logo__box {
-  margin-left: 215px;
   transition: transform 500ms;
+}
+@media screen and (min-width: 480px) {
+  .logo__box {
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__box {
+    margin-left: 215px;
+  }
 }
 .logo__box:hover {
   transform: translate(-5%) scale(1.1);
@@ -746,9 +755,8 @@ a {
 .header__container {
   position: fixed;
   top: 0;
-  left: 15px;
   z-index: 100;
-  width: 1600px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -757,12 +765,30 @@ a {
   line-height: 1.1428571429;
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--grey-color);
-  min-height: 80px;
+  min-height: 60px;
   background-color: var(--pure-white);
 }
+@media screen and (min-width: 768px) {
+  .header__container {
+    min-height: 80px;
+  }
+}
 
-.header__nav {
-  margin-left: 93px;
+@media screen and (min-width: 480px) {
+  .header__nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: inline-block;
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__nav {
+    margin-left: 93px;
+  }
 }
 
 .header__navi-list {
@@ -793,12 +819,38 @@ a {
   background-color: var(--accent-color);
 }
 
+.header__contacts-box {
+  outline: 2px solid salmon;
+}
+@media screen and (min-width: 480px) {
+  .header__contacts-box {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__contacts-box {
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-box {
+    width: 342px;
+    height: 16px;
+    margin-right: auto;
+  }
+}
+
 .header__contacts {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;
-  margin-right: 215px;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 .header__contacts-link {
@@ -816,6 +868,17 @@ a {
 .header__contacts-icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__mail {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__mail {
+    margin-bottom: 0px;
+  }
 }
 
 .hero {

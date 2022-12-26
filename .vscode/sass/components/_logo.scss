@@ -1,6 +1,11 @@
 
 .logo__box {
+   @include mq(mobile) {
+    margin-left: 15px;
+  }
+  @include mq(desktop) {
     margin-left: 215px;
+  }
     transition: transform 500ms;
   
     &:hover {
