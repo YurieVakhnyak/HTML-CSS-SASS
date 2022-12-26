@@ -7,6 +7,9 @@
   .adress__item:not(:last-child) {
     display: block;
     margin-bottom: 9px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
   }
   
   .adress__map {

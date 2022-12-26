@@ -23,6 +23,26 @@
     ),
     url(../css/image/hero/hero-bcg-img.jpg);
   background-repeat: no-repeat;
+  // break-point mobile
+  @media screen and (max-width: 480px) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../css/image/hero/hero-bcg-mobile.jpg);
+    background-repeat: cover;
+  }
+
+  // break-point tablet
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../css/image/hero/hero-bcg-tablet.jpg);
+    background-repeat: no-repeat;
+  }
+
 }
 
 .hero__title {
