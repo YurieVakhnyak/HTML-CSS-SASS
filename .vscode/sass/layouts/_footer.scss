@@ -1,61 +1,61 @@
-.footer__container {    
+.footer__container {
   display: flex;
   flex-wrap: wrap;
-    @include section(60px, 60px);
-    background-color: var(--dark-bcg-color);
-  
-  }
-  
-  .footer__box-one {
+  @include section(60px, 60px);
+  background-color: var(--dark-bcg-color);
+}
+
+.footer__box-one {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
     margin: 0 auto 60px;    
-    @media screen and (max-width: 1199px) {
-      text-align: center;
-    }
-    
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      min-width: 246px;
   }
-      @media screen and (min-width: 1200px) {
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    min-width: 246px;
+  }
+  @media screen and (min-width: 1200px) {
     min-width: 107px;
+    margin-left: auto;
   }
 }
-  
-  .logo__thumb {
-    margin-bottom: 20px;
-  }
 
-  .footer__logo {
-    color: var(--pure-white);    
-  }
+.logo__thumb {
+  margin-bottom: 20px;
+}
 
-  .footer__box-two {
-    width: 206px;
-    min-height: 80px;
-    margin: 0 auto 60px;    
-    // text-align: center;
-    // margin-top: 12px;
-    // margin-left: 70px;
-  }
-  
-  .footer__box-two .socials__thumb {
-    margin: 0;
-  }
-  
-  .footer__icon {
-    background-color: rgba(255, 255, 255, 0.1);
-    fill: var(--pure-white);
-  }
-  
-  .footer__text {
-    text-transform: uppercase;
-    color: var(--pure-white);
-    margin-bottom: 20px;
-    @media screen and (max-width: 1199px) {
-      text-align: center;
-    }
-  }
-  
-  .footer__box-three {
+.footer__logo {
+  color: var(--pure-white);
+}
+
+.footer__box-two {
+  width: 206px;
+  min-height: 80px;
+  margin: 0 auto 60px;
+  // text-align: center;
+  // margin-top: 12px;
+  // margin-left: 70px;
+}
+
+.footer__box-two .socials__thumb {
+  margin: 0;
+}
+
+.footer__icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--pure-white);
+}
+
+.footer__text {
+  text-transform: uppercase;
+  color: var(--pure-white);
+  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
     text-align: center;
-    margin: 0 auto;  
   }
+}
+
+.footer__box-three {
+  text-align: center;
+  margin: 0 auto;
+}

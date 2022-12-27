@@ -2,10 +2,21 @@ body {
     color: var(--primary-text-color);
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.03em;
-    
+   position: relative;
+   top: 60px;
+   
+   @include mq(tablet) {
+    top: 80px;
+   }
   }
 
   #page.no-scroll {
     overflow: hidden;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
   

@@ -6,7 +6,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -16,6 +15,7 @@
   background-color: var(--pure-white);
   @include mq(tablet) {
     min-height: 80px;
+    justify-content: center;
   }
 }
 
@@ -42,8 +42,7 @@
 .header__navi-link {
   position: relative;
   padding: 32px 0;
-  
-  
+
   color: currentColor;
   transition: color var(--anim);
   &:hover,
@@ -65,7 +64,6 @@
 }
 
 .header__contacts-box {
-  outline: 2px solid salmon;
   @include mq(mobile) {
     display: none;
   }
@@ -116,4 +114,17 @@
   @include mq(desktop) {
     margin-bottom: 0px;
   }
+}
+
+.header__menu-box {
+  margin-left: auto;
+  margin-right: 15px;
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.header__menu-btn {
+  border: 0;
+  background-color: var(--pure-white);
 }

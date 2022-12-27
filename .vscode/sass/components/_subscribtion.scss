@@ -1,43 +1,48 @@
- .subscribtion__field {
+.subscribtion__field {
   @media screen and (max-width: 1199px) {
     display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
- }
-  
-  .subscribtion__input,
-  .subscribtion__input:not(:placeholder-shown) {
-    box-sizing: border-box;
+}
+
+.subscribtion__input,
+.subscribtion__input:not(:placeholder-shown) {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin-right: 12px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @include mq(desktop) {
     width: 358px;
-    height: 50px;
-    margin-right: 12px;
-    @media screen and (max-width: 1199px) {
-      width: 450px;
-      margin-right: 0px;
-      margin-bottom: 20px;
-    }
-    
-    padding: 0 10px 0 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: transparent;
-    position: relative;
-    color: rgba(255, 255, 255, 0.6);
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: calc(20 / 16);
-    color: rgba(255, 255, 255, 0.6);
+  }
+  @media screen and (max-width: 1199px) {
+    min-width: 290px;
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
 
-  .subscribtion__btn-box {  
-    display: flex;  
-    justify-content: center;
-    text-align: center;
-  }
+  padding: 0 10px 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: calc(20 / 16);
+  color: rgba(255, 255, 255, 0.6);
+}
 
-  .subscribtion__icon {
-    margin-left: 10px;
-  }
+.subscribtion__btn-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.subscribtion__icon {
+  margin-left: 10px;
+}
