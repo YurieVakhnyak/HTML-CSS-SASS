@@ -4,6 +4,7 @@
 
 .portfolio__btn-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   color: var(--primary-text-color);
   background-color: var(--white-grey-color);
