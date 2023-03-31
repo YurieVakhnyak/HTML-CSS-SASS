@@ -475,16 +475,58 @@
 
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"
-    integrity="sha512-VpQwrlvKqJHKtIvpL8Zv6819FkTJyE1DoVNH0L2RLn8hUPjRjkS/bCYurZs0DX9Ybwu9oHRHdBZR9fESaq8Z8A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./js/mask.js"></script>
-  <script src="./js/modal.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="./js/aos.js"></script>
+  <!-- Modal window -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal"><button class="modal__btn" data-modal-close>
+        <svg class="modal__icon-close" width="18px" height="18px">
+          <use href="./images/icons.svg#icon-close-x"></use>
+        </svg>
+      </button>
+      <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+      <form class="modal__form">
+        <div class="modal__form-group">
+          <label class="modal__form-field">
+            <input class="modal__form-input modal__input" name="user-name" type="text" required>
+            <span class="modal__form-label modal__text">Ім'я</span>
+            <svg class="modal__icon" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </label><label class="modal__form-field">
+            <input class="modal__form-input modal__input" name="tel-name" type="tel" id="tel-name" required>
+            <span class="modal__form-label modal__text">Телефон</span>
+            <svg class="modal__icon" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </label><label class="modal__form-field">
+            <input class="modal__form-input modal__input" name="mail-name" type="email" placeholder="">
+            <span class="modal__form-label modal__text">Пошта</span>
+            <svg class="modal__icon" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </label><label class="modal__form-field modal__textaria">
+            <textarea class="modal__textaria-input modal__input" name="comment-name" rows="5"
+              placeholder="Введіть текст"></textarea><span class="modal__form-label modal__text">Коментар</span>
+          </label>
+        </div><label class="modal__checkbox-thumb modal__text">
+          <input class="modal__checkbox-input " type="checkbox" name="checkbox-name" checked required>
+          <span class="modal__privat-policy">Погоджуюся з розсилкою та приймаю
+            <a href="" class="agreement-link link">Умови договору</a></span>
+        </label><button class="modal__form-btn btn" type="submit">Відправити</button>
+      </form>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"
+      integrity="sha512-VpQwrlvKqJHKtIvpL8Zv6819FkTJyE1DoVNH0L2RLn8hUPjRjkS/bCYurZs0DX9Ybwu9oHRHdBZR9fESaq8Z8A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/mask.js"></script>
+    <script src="./js/modal.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
 </body>
 
 </html>
