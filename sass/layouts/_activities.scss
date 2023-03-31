@@ -1,0 +1,31 @@
+.activities {
+      @media screen and (max-width: 1199px) {
+      display: none;      
+    }
+    .container {
+    @media screen and (min-width: 1200px) {
+      @include section(0, 94px);    
+    }
+  }
+  }
+  
+  .activities__item {
+    position: relative;
+  }
+  
+  .activities__text {
+    text-transform: uppercase;
+    color: var(--pure-white);
+  }
+  
+  .activities__label-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 370px;
+    background-color: rgba(47, 48, 58, 0.8);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }

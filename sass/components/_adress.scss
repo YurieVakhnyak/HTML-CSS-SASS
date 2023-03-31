@@ -1,0 +1,26 @@
+.adress {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
+  
+  .adress__item:not(:last-child) {
+    display: block;
+    margin-bottom: 9px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+  }
+  
+  .adress__map {
+    color: var(--pure-white);
+  }
+  
+  .adress__mail {
+    color: #d9d9d9;
+  }
+  
+  .adress__tel {
+    color: var(--white-transparence);
+  }
+  

@@ -1,0 +1,32 @@
+.socials__thumb {
+    display: flex;
+    justify-content: space-between;
+    width: 206px;    
+    margin: 16px auto 30px;
+  }
+  
+  .socials__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 0px;
+    fill: var(--grey-icon-color);
+  
+    transition: background-color var(--anim);
+
+        &:hover,
+        &:focus {
+        fill: var(--pure-white);
+        background-color: var(--accent-color);
+      }
+  }
+  
+  .socials__icon {
+    position: relative;
+    fill: inherit;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+    transition: fill var(--anim);
+  }

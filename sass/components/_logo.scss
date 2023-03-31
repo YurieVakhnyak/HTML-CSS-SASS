@@ -1,0 +1,26 @@
+.logo__box {
+  @include mq(mobile) {
+    margin-left: 15px;
+  }
+  @include mq(desktop) {
+    margin-left: auto;
+  }
+  transition: transform 500ms;
+
+  &:hover {
+    transform: translate(-5%) scale(1.1);
+    transform-origin: 50%;
+  }
+}
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 25);
+  color: var(--pure-black);
+}
+
+.logo__part {
+  color: var(--accent-color);
+}
